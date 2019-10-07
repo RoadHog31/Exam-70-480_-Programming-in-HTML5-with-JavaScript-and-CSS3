@@ -60,5 +60,5 @@ outerDiv.appendChild(element);*/
 var element = inner.insertBefore(document.createElement("article"), inner.firstChild);
 element.innerText = "My new <article> element";*/
 
-var innerDiv = document.getElementById("innerDivB");
-var p = innerDiv.removeChild(document.getElementById("P1"));
+/*var innerDiv = document.getElementById("innerDiv");
+var p = innerDiv.removeChild(document.getElementById("innerDivB"));*/

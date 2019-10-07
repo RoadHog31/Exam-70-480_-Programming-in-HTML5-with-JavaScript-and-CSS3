@@ -6,6 +6,7 @@
 //insert console message in the chrome web dev tool console.
 console.log('Here\'s a hidden message');
 
+//The purpose of retrieving elements from the DOM is to be able to do something with them. 
 //insert date on web page
 let todaysDate = new Date();
 let formatDate = todaysDate.toDateString();
@@ -19,3 +20,36 @@ element.innerText = "My new <article> element";
 
 var element = document.getElementById("outerDiv");
 alert(element.innerHTML);
+
+//document.querySelector("#outerDiv");
+//lert(document);
+
+/* window.onload = function () {
+      var element = document.getElementById("outerDiv")
+      alert(element.innerHTML);
+     } */
+
+/* window.onload = function () {
+   var paragraphs = document.getElementsByTagName("p");
+   alert(paragraphs.length);
+ }*/
+
+/*window.onload = function () {
+  var paragraphs = document.getElementsByClassName("subPara");
+  alert("<p> elements with class subPara: " +           paragraphs.length);
+}*/
+
+/*window.onload = function () {
+var p =  document.querySelectorAll("P");
+  alert("<p> elements with p: " + p.length  );
+}*/
+
+/*window.onload = function () {
+var p =  document.querySelector("#outerDiv");
+  alert("<p> elements with div: " + p.length  );
+}*/
+
+var outerDiv = document.getElementById("outerDiv");
+var element = document.createElement("article");
+element.innerText = "My new <article> element";
+outerDiv.appendChild(element);

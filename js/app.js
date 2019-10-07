@@ -62,3 +62,19 @@ element.innerText = "My new <article> element";*/
 
 /*var innerDiv = document.getElementById("innerDiv");
 var p = innerDiv.removeChild(document.getElementById("innerDivB"));*/
+
+/*var innerDiv = document.getElementById("innerDiv");
+innerDiv.remove();*/
+
+//replaceNode and replaceChild methods
+var innerDiv = document.getElementById("innerDivB");
+var newDiv = document.createElement("div");
+for (let i = 0; i < innerDiv.childNodes.length; i++) {
+
+    var anchor = newDiv.appendChild(document.createElement("a"));
+    anchor.setAttribute("href", "http://www.bing.ca");
+    anchor.text = innerDiv.childNodes[i].textContent;
+    newDiv.appendChild(document.createElement("br"));
+
+
+}

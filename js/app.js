@@ -78,10 +78,12 @@ for (let i = 0; i < innerDiv.childNodes.length; i++) {
 }
 innerDiv.replaceWith(newDiv);*/
 
+//create video object
 var video;
 
 window.onload = function () {
 
+    //when window loads pass in the element id to access the html object methods.
     video = document.getElementById("sampleVideo");
 
 }

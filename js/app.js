@@ -88,16 +88,13 @@ window.onload = function () {
     video = document.getElementById("sampleVideo");
 
 }
-
 function play() {
     video.play();
 
 }
-
 function pause() {
     video.pause();
 }
-
 function back() {
     video.currentTime -= 10;
 }*/

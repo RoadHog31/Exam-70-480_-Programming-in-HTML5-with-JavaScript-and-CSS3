@@ -31,6 +31,10 @@ li {
     /*font-style: oblique;*/
 }
 
-img:hover{
+img:hover {
     cursor: pointer;
+}
+
+canvas {
+    border: 1px solid blueviolet;
 }

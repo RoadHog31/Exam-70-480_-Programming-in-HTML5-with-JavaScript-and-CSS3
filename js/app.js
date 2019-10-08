@@ -75,6 +75,5 @@ for (let i = 0; i < innerDiv.childNodes.length; i++) {
     anchor.setAttribute("href", "http://www.bing.ca");
     anchor.text = innerDiv.childNodes[i].textContent;
     newDiv.appendChild(document.createElement("br"));
-
-
 }
+innerDiv.replaceWith(newDiv);

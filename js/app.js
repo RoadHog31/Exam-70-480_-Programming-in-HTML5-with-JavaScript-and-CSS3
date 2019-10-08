@@ -78,6 +78,7 @@ for (let i = 0; i < innerDiv.childNodes.length; i++) {
 }
 innerDiv.replaceWith(newDiv);*/
 
+/*
 //create video object
 var video;
 
@@ -99,4 +100,5 @@ function pause() {
 
 function back() {
     video.currentTime -= 10;
-}
+}*/
+

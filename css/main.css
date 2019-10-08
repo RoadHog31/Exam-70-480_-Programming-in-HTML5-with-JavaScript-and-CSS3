@@ -30,3 +30,7 @@ li {
 
     /*font-style: oblique;*/
 }
+
+img:hover{
+    cursor: pointer;
+}

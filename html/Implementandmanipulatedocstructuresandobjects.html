@@ -58,7 +58,47 @@
       </div>
     </div>
     <input type="text" /><input type="submit" value="Submit" />
-    <!--<video src="sample.mp4" autoplay></video>-->
+    <br />
+    <video
+      src="D:\Pictures\MOV_0002.mp4"
+      loop
+      autoplay
+      width="300"
+      height="300"
+    ></video>
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Panel heading</div>
+      <div class="panel-body">
+        <p>Text goes here...</p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sample Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <video height="400" width="400" id="sampleVideo">
+                <source src="D:\Pictures\MOV_0002.mp4" type="audio/mp4" />
+              </video>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img id="backButton" src="C:\Users\Hotro_000\Desktop\MySite31\img\icons8_back_filled_50px.png" onclick="back();"/><br/>
+              <img id="playButton" src="C:\Users\Hotro_000\Desktop\MySite31\img\icons8_play_filled_50px.png" onclick="play();"/><br/>
+              <img id="playButton" src="C:\Users\Hotro_000\Desktop\MySite31\img\icons8_pause_64px.png" onclick="pause();"/><br/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!--Load the script last-->
     <script src="C:\Users\Hotro_000\Desktop\MySite31\js\app.js"></script>

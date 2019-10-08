@@ -67,7 +67,7 @@ var p = innerDiv.removeChild(document.getElementById("innerDivB"));*/
 innerDiv.remove();*/
 
 //replaceNode and replaceChild methods
-var innerDiv = document.getElementById("innerDivB");
+/*var innerDiv = document.getElementById("innerDivB");
 var newDiv = document.createElement("div");
 for (let i = 0; i < innerDiv.childNodes.length; i++) {
 
@@ -76,4 +76,25 @@ for (let i = 0; i < innerDiv.childNodes.length; i++) {
     anchor.text = innerDiv.childNodes[i].textContent;
     newDiv.appendChild(document.createElement("br"));
 }
-innerDiv.replaceWith(newDiv);
+innerDiv.replaceWith(newDiv);*/
+
+var video;
+
+window.onload = function () {
+
+    video = document.getElementById("sampleVideo");
+
+}
+
+function play() {
+    video.play();
+
+}
+
+function pause() {
+    video.pause();
+}
+
+function back() {
+    video.currentTime -= 10;
+}

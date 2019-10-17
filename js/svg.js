@@ -8,7 +8,6 @@ window.onload = function () {
     // @ts-ignore
     var ctxt = drawingSurface.getContext("2d");
 
-
     ctxt.beginPath();
     ctxt.moveTo(10, 10);
     ctxt.lineTo(225, 350);
@@ -109,6 +108,16 @@ window.onload = function () {
     ctxt.fill();
     ctxt.stroke();
 
+    ctxt.lineWidth = 3;
+    ctxt.rect(150, 150, 250, 175);
+    var gradient = ctxt.createRadialGradient(200, 200, 5, 250, 250, 100);
+    gradient.addColorStop(0, "Red");
+    gradient.addColorStop(.5, "Orange");
+    gradient.addColorStop(1, "Blue");
+    ctxt.fillStyle = gradient;
+    ctxt.fill();
+    ctxt.stroke();
 
+    
 
 }

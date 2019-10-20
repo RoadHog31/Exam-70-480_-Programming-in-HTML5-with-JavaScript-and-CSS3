@@ -144,9 +144,22 @@ window.onload = function () {
         ctxt.stroke();
     }
 
+    ctxt.strokeStyle = "Black";
+    ctxt.strokeText("1. Text with default font", 100, 100);
+
+    ctxt.font = "44px arial";
+    ctxt.strokeStyle = "Red";
+    ctxt.strokeText("2. Text with altered colored font", 200, 480);
+
+    //Center text horiz and vert on the canvas.
+    ctxt.font = "44px arial";
+    //center is case sensitive - be careful!!!
+    ctxt.textAlign = "center";
+    ctxt.fillStyle = "Purple";
+    // @ts-ignore
+    ctxt.fillText("3. Text with fill colored font Centered", drawingSurface.width / 2, drawingSurface.height / 2);
+
     
-
-
 
 
 

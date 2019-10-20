@@ -118,6 +118,36 @@ window.onload = function () {
     ctxt.fill();
     ctxt.stroke();
 
+    ctxt.lineWidth = 3;
+    ctxt.rect(150, 150, 200, 125);
+    var img = new Image();
+    img.src = "C:/Users/Hotro_000/Desktop/MySite31/img/icons8_play_filled_50px.png";
+    img.onload = function () {
+
+        var pattern = ctxt.createPattern(img, "repeat");
+        ctxt.fillStyle = pattern;
+        ctxt.fill();
+        ctxt.stroke();
+    }
+
+    var img = new this.Image();
+    img.src = "C:/Users/Hotro_000/Desktop/MySite31/img/icons8_play_filled_50px.png";
+    img.onload = function () {
+        ctxt.drawImage(img, 50, 50);
+        ctxt.stroke();
+    }
+
+    var img = new this.Image();
+    img.src = "C:/Users/Hotro_000/Desktop/MySite31/img/icons8_play_filled_50px.png";
+    img.onload = function () {
+        ctxt.drawImage(img, 650, 500, img.width * .5, img.height * .5);
+        ctxt.stroke();
+    }
+
     
+
+
+
+
 
 }

@@ -9,8 +9,7 @@ window.onload = function () {
     //can also grab a 3d canvas.
     var ctxt = drawingSurface.getContext("2d");
 
-    var img = new this.Image();
-    var canvasPixels = img.getImageData(0, 0, 1, 0);
+    var canvasPixels = ctxt.getImageData(0, 0, 1, 0);
     canvasPixels.onload = function () {
         if (canvasPixels != null)
             ctxt.drawImage(img, 50, 50, img.width, img.height);

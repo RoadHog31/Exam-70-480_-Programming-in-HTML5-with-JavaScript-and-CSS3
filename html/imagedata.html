@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Task Timeline</title>
+    <title>SVG Animations Yehhh!!!</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--separation of concerns-->
@@ -13,13 +18,18 @@
     />
   </head>
   <body>
-    <h1>Task Timeline</h1>
-    <p id="date"></p>
-    <ul>
-      <li class="list">Edit the head</li>
-      <li class="list">Edit the body</li>
-      <li>Link to Javascript</li>
-    </ul>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <article>Hello there my new article!!!!!!!!!!!</article>
+
+    <canvas id="drawingSurface" width="800" height="600">
+      Your browser does not support HTML5!</canvas
+    >
+
     <!--Load the script last-->
     <script src="C:\Users\Hotro_000\Desktop\MySite31\js\imagedata.js"></script>
     <!--an example of fault tolerance or graceful degradation.-->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SVG Animations Practice</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--separation of concerns-->
+    <link
+      rel="stylesheet"
+      href="C:\Users\Hotro_000\Desktop\MySite31\css\main.css"
+    />
+  </head>
+  <body>
+    <article>Testing svg</article>
+    
+    <svg width=900 height=900 >
+      <circle id="circle" cx="250" cy="150" r="50" fill="green" onmouseover="Red(evt)"
+        onmouseout="Green(evt)"></circle>
+
+        <rect id="lightStandard" x="100" y="100" width="60" height="200" fill="black"/>
+        <circle id="redlight" cx="129" cy="145" r="25" fill="red"/>
+        <circle id="amberlight" cx="129" cy="205" r="25" fill="yellow"/>
+        <circle id="greenlight" cx="129" cy="265" r="25" fill="green"/>
+
+        <polygon points="10.5,15 30,35 10,85 100,85, 70,35,100,15" fill="purple"/>
+        <polyline points="10,150 30,170 50,132 62,196 78,165 96,170"
+
+            style="stroke:orange; fill:none; stroke-width:5;"/>
+
+        <line xl="150" yl="100" x2="150" y2="150" style="stroke:blue; stroke-width: 3"/>
+        <ellipse cx="350" cy="250" rx="30" ry="55" fill="green"/>
+        <text x="100" y="15" style="stroke:black;stroke-width: 1;">
+            Examples of SVG Shapes and Text</text>
+    </svg>
+
+    <!--Load the script last-->
+    <script src="C:\Users\Hotro_000\Desktop\MySite31\js\svgpractice.js"></script>
+    <!--an example of fault tolerance or graceful degradation.-->
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  </body>
+</html>

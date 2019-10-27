@@ -20,8 +20,8 @@ function init() {
         directionx=5; directiony=5;
 
         //Code needs to know canvas x, y sizes.         
-        w = ctx.width = window.innerWidth;     
-        h = ctx.height = window.innerHeight;
+        w = drawingSurface.width;     
+        h = drawingSurface.height;
         setInterval(position, 25);         
     }
 }
@@ -41,7 +41,7 @@ function position(){
 
 function paint(){
     
-    ctx.clearRect(0,0, ctx.w, ctx.h);
+    ctx.clearRect(0,0, drawingSurface.width, drawingSurface.height);
     ctx.beginPath();
     ctx.arc(x, y, 30, 0, Math.PI * 2, true);
     ctx.fill();

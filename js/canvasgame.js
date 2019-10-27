@@ -2,12 +2,10 @@
 //@ts-check
 var ctx, w, h, x, y, directionx, directiony;
 
-
 //onload event encapsulates your code and renders when page loads.
-window.onload = function () {
-
+function init() {
     
-    const drawingSurface = document.getElementById('drawingSurface');
+    var drawingSurface = document.getElementById('drawingSurface');
 
     if (drawingSurface.getContext) {
         
@@ -21,19 +19,20 @@ window.onload = function () {
         x = 5; y = 44;         
         directionx=5; directiony=5;
         //Code needs to know canvas x, y sizes. 
-        //@ts-ignore
+        
         w=drawingSurface.width; 
-        //@ts-ignore
+    
         h=drawingSurface.height;
         setInterval(position, 25);     
-        paint();   
+        
     }
 }
+onload = init;
 
 function position(){
 
-    
-    if((x + directionx > w) || (y + directionx < 0))   directionx = -directionx;
+    paint();
+    if((x + directionx > w) || (x + directionx < 0))   directionx = -directionx;
 
     if ((y + directiony > h) || (y + directiony < 0))  directiony = -directiony;
     

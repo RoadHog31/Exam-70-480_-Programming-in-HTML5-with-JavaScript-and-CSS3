@@ -30,9 +30,9 @@ onload = init;
 function position(){
 
     paint();
-    if((x + directionx > w) || (x + directionx < 0))   directionx = -directionx;
+    if((x + directionx > drawingSurface.width) || (x + directionx < 0))   directionx = -directionx;
 
-    if ((y + directiony > h) || (y + directiony < 0))  directiony = -directiony;
+    if ((y + directiony > drawingSurface.height) || (y + directiony < 0))  directiony = -directiony;
     
     x += directionx;
     y += directiony;
@@ -41,10 +41,11 @@ function position(){
 
 function paint(){
     
-    ctx.clearRect(0,0, this.w.width, this.h.height);
+    ctx.clearRect(0,0, this.drawingSurface.width, this.drawingSurface.height);
     ctx.beginPath();
     ctx.arc(x, y, 30, 0, Math.PI * 2, true);
     ctx.fill();
+    
 }
 
 function Move(){

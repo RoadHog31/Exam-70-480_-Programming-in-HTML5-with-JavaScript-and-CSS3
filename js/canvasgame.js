@@ -44,15 +44,13 @@ function paint(){
     ctx.clearRect(0,0, this.drawingSurface.width, this.drawingSurface.height);
     ctx.beginPath();
     ctx.arc(x, y, 30, 0, Math.PI * 2, true);
-    ctx.fill();
-    
+    ctx.fill();    
 }
 
 function Move(){
 
     var element = document.getElementById("drawingSurface");
     var pos = 0;
-
 }
 
 function Red(evt) {

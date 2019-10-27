@@ -14,16 +14,15 @@ function init() {
         //ctx.beginPath();
         //context.arc(100-10, 100, 75, 0.00001 * this.Math.PI, false); // Math.PI returns 3.141592653589793
         ctx.fillStyle = "#f30";
-        drawingSurface.style.background = "#ff0";       
+        drawingSurface.style.background = "#f56";       
               
         x = 5; y = 44;         
         directionx=5; directiony=5;
-        //Code needs to know canvas x, y sizes. 
-        
-        w=drawingSurface.width;     
-        h=drawingSurface.height;
-        setInterval(position, 25);     
-        
+
+        //Code needs to know canvas x, y sizes.         
+        w = ctx.width = window.innerWidth;     
+        h = ctx.height = window.innerHeight;
+        setInterval(position, 25);         
     }
 }
 onload = init;

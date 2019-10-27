@@ -1,54 +1,53 @@
-//@ts-check
 'use strict';
-var ctx, w, h, x, y, dx, dy;
+//@ts-check
+var ctx, w, h, x, y, directionx, directiony;
 
 
 //onload event encapsulates your code and renders when page loads.
 window.onload = function () {
 
-    var drawingSurface = document.getElementById("drawingSurface");   
+    
+    const drawingSurface = document.getElementById('drawingSurface');
 
-    if (drawingSurface) {
-        //@ts-ignore
+    if (drawingSurface.getContext) {
+        
         var ctx = drawingSurface.getContext("2d");
 
         //ctx.beginPath();
         //context.arc(100-10, 100, 75, 0.00001 * this.Math.PI, false); // Math.PI returns 3.141592653589793
         ctx.fillStyle = "#f30";
-        drawingSurface.style.background = "#ff0";
-        ctx.lineWidth = 5;
-        ctx.strokeStyle = '#0f0';
+        drawingSurface.style.background = "#ff0";       
               
-        x = 5; y = 44; 
-        
-        dx=5; dy=5;
+        x = 5; y = 44;         
+        directionx=5; directiony=5;
+        //Code needs to know canvas x, y sizes. 
         //@ts-ignore
         w=drawingSurface.width; 
         //@ts-ignore
         h=drawingSurface.height;
-        setInterval(position, 25);
+        setInterval(position, 25);     
+        paint();   
     }
 }
 
 function position(){
 
-    paint();
-    if((x + dx > w) || (y + dy) < 0)   dx = -dx;
-
-    if ((y + dy > h) || (y + dy < 0))  dy = -dy;
     
-    x += dx;
-    y += dy;
+    if((x + directionx > w) || (y + directionx < 0))   directionx = -directionx;
+
+    if ((y + directiony > h) || (y + directiony < 0))  directiony = -directiony;
+    
+    x += directionx;
+    y += directiony;
+    
 }
 
 function paint(){
-
-    //@ts-ignore
+    
     ctx.clearRect(0,0, w, h);
-    ctx.begnPath();
+    ctx.beginPath();
     ctx.arc(x, y, 30, 0, Math.PI * 2, true);
     ctx.fill();
-
 }
 
 function Move(){

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //@ts-check
 var ctx, w, h, x, y, directionx, directiony;
 
@@ -41,7 +41,7 @@ function position(){
 
 function paint(){
     
-    ctx.clearRect(0,0, drawingSurface.width, drawingSurface.height);
+    ctx.clearRect(0,0, this.w.width, this.h.height);
     ctx.beginPath();
     ctx.arc(x, y, 30, 0, Math.PI * 2, true);
     ctx.fill();

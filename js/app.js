@@ -22,7 +22,7 @@ element.innerText = "My new <article> element";*/
 alert(element.innerHTML);*/
 
 //document.querySelector("#outerDiv");
-//lert(document);
+//alert(document);
 
 /* window.onload = function () {
       var element = document.getElementById("outerDiv")

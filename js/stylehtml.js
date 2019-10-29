@@ -34,7 +34,7 @@ window.onload = function () {
         } 
         else {
 
-            document.getElementById("innderDiv").style.display = 'inline';            
+            document.getElementById("innerDiv").style.display = 'inline';            
         }
     }
 }

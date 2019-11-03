@@ -10,8 +10,7 @@ window.onload = function(){
         if (document.getElementById("Yesbtn").onclick) {
 
             this.document.getElementById("Question1").style.visibility = "hidden";
-            this.document.getElementById("Question2").style.visibility = "visible"; 
-            
+            this.document.getElementById("Question2").style.visibility = "visible";             
         }
               
     }

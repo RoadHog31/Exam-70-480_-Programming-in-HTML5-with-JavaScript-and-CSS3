@@ -1,6 +1,7 @@
 window.onload = function(){
 
-    /*Local storage is a great solution for this. 
+    /*Local storage is a great solution for this 
+    (but consider only as temporary storage for live connected website). 
     However, to store the custom object in local data, 
     you need a method to convert the custom object to 
     a string that matches the local storage model. 

@@ -1,10 +1,16 @@
 window.onload = function(){
 
+    var customer = new this.Object();
+    customer.firstName = "Rick";
+    customer.lastName = "Pino";
+    customer.shirtSize = "XL";
+    localStorage.setItem("cart1", JSON.stringify(customer));
+    
     /*Notice that this code added a call to the LoadFromStorage method 
     to the top of the window.onload event, so that localStorage is checked 
     after the page loads.*/
-    LoadFromStorage();   
-
+    LoadFromStorage();  
+    
     /*
     The following code implements each button’s onclick event. 
     A user can now add items to local storage and see what’s in storage. 
@@ -14,18 +20,18 @@ window.onload = function(){
     */
     document.getElementById("btnAdd").onclick = function () {
 
-        sessionStorage.setItem(document.getElementById("toStorageKey").value,
+        localStorage.setItem(document.getElementById("toStorageKey").value,
         document.getElementById("toStorageValue").value); 
         LoadFromStorage();
     }
 
     document.getElementById("btnRemove").onclick = function (){         
-        sessionStorage.removeItem(document.getElementById("toStorageKey").value);
+        localStorage.removeItem(document.getElementById("toStorageKey").value);
         LoadFromStorage();
     }
 
     document.getElementById("btnClear").onclick = function (){
-        sessionStorage.clear();
+        localStorage.clear();
         LoadFromStorage();
     }
 
@@ -44,16 +50,18 @@ window.onload = function(){
             localStoragereference with a reference to sessionStorage.
             Try replacing all uses of localStorage with sessionStorage. This time 
             notice that closing the browser automatically clears out any data in the storage.
+            The benefit to using the Web Storage API instead of cookies is that the data 
+            resides locally and stays local. 
             */
-            if (sessionStorage.length > 0) 
+            if (localStorage.length > 0) 
             {
                 for (let i = 0; i < localStorage.length; i++) {
 
                     var row = document.createElement("tr");
                     var key = document.createElement("td");
                     var val = document.createElement("td");
-                    key.innerText = sessionStorage.key(i);
-                    val.innerText = sessionStorage.getItem(key.innerText);
+                    key.innerText = localStorage.key(i);
+                    val.innerText = localStorage.getItem(key.innerText);
                     row.appendChild(key);
                     row.appendChild(val);
                     tbl.appendChild(row);                    

@@ -1,5 +1,12 @@
 window.onload = function(){
 
+    /*Local storage is a great solution for this. 
+    However, to store the custom object in local data, 
+    you need a method to convert the custom object to 
+    a string that matches the local storage model. 
+    This is where JavaScript Object Notification (JSON) can come in handy. 
+    You can serialize the object into a JSON string, give it a key, 
+    and then store it in web storage.*/
     var customer = new this.Object();
     customer.firstName = "Rick";
     customer.lastName = "Pino";

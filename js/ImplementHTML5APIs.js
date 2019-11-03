@@ -6,58 +6,60 @@ window.onload = function(){
     LoadFromStorage();   
 
     /*
-    The preceding code implements each button’s onclick event. 
+    The following code implements each button’s onclick event. 
     A user can now add items to local storage and see what’s in storage. 
     The user can continue adding to local storage in this application until 
     the storage is full. Availability of local storage is limited, 
-    and the storage available isn’t consistent across browsers.
+    and the storage available isn’t consistent across browsers - 5 - 10mb.
     */
     document.getElementById("btnAdd").onclick = function () {
 
-        localStorage.setItem(document.getElementById("toStorageKey").value,
+        sessionStorage.setItem(document.getElementById("toStorageKey").value,
         document.getElementById("toStorageValue").value); 
         LoadFromStorage();
     }
 
     document.getElementById("btnRemove").onclick = function (){         
-        localStorage.removeItem(document.getElementById("toStorageKey").value);
+        sessionStorage.removeItem(document.getElementById("toStorageKey").value);
         LoadFromStorage();
     }
 
     document.getElementById("btnClear").onclick = function (){
-        localStorage.clear();
+        sessionStorage.clear();
         LoadFromStorage();
-
     }
 
     //The LoadFromStorage method is called for each operation to...
     //refresh the page with the data available in the storage. 
-    function LoadFromStorage() {
-        
+    function LoadFromStorage() {        
 
             var storageDiv = document.getElementById("storage");
             var tbl = document.createElement("table");
             tbl.id = "storageTable";
-            /*The Web Storage API is available as a global object.
+            
+            /*
+            The Web Storage API is available as a global object.
             The localStorage and sessionStorage objects provide exactly the same API.
             If you want to test these examples using session storage, simply replace the 
             localStoragereference with a reference to sessionStorage.
+            Try replacing all uses of localStorage with sessionStorage. This time 
+            notice that closing the browser automatically clears out any data in the storage.
             */
-            if (localStorage.length > 0) 
+            if (sessionStorage.length > 0) 
             {
                 for (let i = 0; i < localStorage.length; i++) {
 
                     var row = document.createElement("tr");
                     var key = document.createElement("td");
                     var val = document.createElement("td");
-                    key.innerText = localStorage.key(i);
-                    val.innerText = localStorage.getItem(key.innerText);
+                    key.innerText = sessionStorage.key(i);
+                    val.innerText = sessionStorage.getItem(key.innerText);
                     row.appendChild(key);
                     row.appendChild(val);
                     tbl.appendChild(row);                    
                 }
             }
-            else{
+            else {
 
                 var row = document.createElement("tr");
                 var col = document.createElement("td");
@@ -68,7 +70,7 @@ window.onload = function(){
 
             if (document.getElementById("storageTable")) {
 
-                document.getElementById("storageTable").replaceNode(tbl);
+                document.getElementById("storageTable").replaceWith(tbl);
                 
             }
             else{

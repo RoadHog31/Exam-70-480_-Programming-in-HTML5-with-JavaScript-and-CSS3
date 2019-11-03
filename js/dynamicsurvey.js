@@ -5,10 +5,15 @@ window.onload = function(){
 
     initQuestions();
 
-    this.document.getElementById("Yesbtn").onclick = function() {
+    this.document.getElementById("btnConfirm").onclick = function() {
 
-        this.document.getElementById("Question1").style.visibility = "hidden";
-        this.document.getElementById("Question2").style.visibility = "visible";        
+        if (document.getElementById("Yesbtn").onclick) {
+
+            this.document.getElementById("Question1").style.visibility = "hidden";
+            this.document.getElementById("Question2").style.visibility = "visible"; 
+            
+        }
+              
     }
             
         document.getElementById("Question3").style.display = "visible";           

@@ -11,8 +11,7 @@ window.onload = function(){
         this.document.getElementById("Question2").style.visibility = "visible";        
     }
             
-        document.getElementById("Question3").style.display = "visible";      
-            
+        document.getElementById("Question3").style.display = "visible";           
         
 }
 

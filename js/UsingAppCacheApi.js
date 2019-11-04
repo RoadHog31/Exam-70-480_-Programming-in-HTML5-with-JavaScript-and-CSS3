@@ -23,6 +23,8 @@ window.onload = function (){
     appCache.oncached = function (e) { alert("cache successsfully downlaoded. "); };
 
     appCache.onupdateready = function(e) { appCache.swapCache(); };
+
+    
 }
 
     

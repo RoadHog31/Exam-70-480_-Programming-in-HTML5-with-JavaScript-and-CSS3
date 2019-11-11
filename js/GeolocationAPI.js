@@ -4,7 +4,7 @@ The Geolocation API supports three key methods that you use to interact with it:
 getCurrentPosition, watchPosition, and clearWatch. */
 
 
-window.onload = function (){
+/* window.onload = function (){
 
     var geolocator = window.navigator.geolocation;
     var posOptions = {enableHighAccuracy: true, timeout: 45000};
@@ -26,16 +26,17 @@ function errorPosition(err) {
     var sp = document.createElement("p");
     sp.innerText = "error: " + err.message; + " code: " + err.code;
     document.getElementById("geoResults").appendChild(sp);
-}
+} */
 
-   /* //LISTING 1-6  Using the Geolocation API to monitor position
+   //LISTING 1-6  Using the Geolocation API to monitor position
    
     var watcher;
     var geoLocator;
     
     window.onload = function () {    
     geoLocator = window.navigator.geolocation;    
-    var posOptions = {enableHighAccuracy: true,timeout: 45000};    
+    var posOptions = {enableHighAccuracy: true,timeout: 45000}; 
+       
     watcher = geoLocator.watchPosition(successPosition, errorPosition, posOptions);
 }
 
@@ -56,6 +57,6 @@ function errorPosition(err)
     sp.innerText = "error: " + err.message; + " code: " + err.code;    
     document.getElementById("geoResults").appendChild(sp);
 
-} */
+}
 
 

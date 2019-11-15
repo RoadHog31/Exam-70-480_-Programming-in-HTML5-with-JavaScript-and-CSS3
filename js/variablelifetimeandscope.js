@@ -14,8 +14,7 @@ window.onload = function(){
             //Do some logic...  
             alert(globalVar);
             alert(localVar);
-            alert(insideDivClick);        
-            
+            alert(insideDivClick);               
     };
     document.getElementById("Div2").onclick = function(){
 
@@ -45,7 +44,7 @@ window.onload = function(){
     }
 
     //This is the only way to make a local variable 
-    //from one function accessible to another function—by passing a parameter.
+    //from one function accessible to another function — by passing a parameter.
     function BFunctionWithParam(p){
 
         alert(p);

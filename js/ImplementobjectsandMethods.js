@@ -78,14 +78,15 @@ Book.prototype = {
     author: new Author(),
     currentPage: 0,
     title: "",
-
+    //Alias flipTo:
     flipTo: function flipToAPage(pNum) {
         this.currentPage = pNum;
     },
-
+    //Alias turnPageForward
     turnPageForward: function turnForward(){
         this.flipTo(this.currentPage++);
     },
+    //Alias turnPageBackward
     turnPageBackward: function turnBackWard(){
         this.flipTo(this.currentPage--);
     }    
@@ -112,3 +113,32 @@ Author.prototype = {
 //Now, the book’s Author is a custom object instead of just a string. 
 //This provides for more extensibility in the design.
 var books = new Array(new Book(), new Book("First Edition", 350, new Author("Stephen", "Pino", "M")));
+
+//Implementing inheritance...
+//(Extending is another way of thinking about inheritance —
+//..an object is extended into another object.) 
+//Object.create is a method available from the Object class in the global namespace. 
+var popupBook = Object.create(Book.prototype, 
+    
+    { hasSound: {value:true},
+    showPopUp:{ value: function showPop()
+    {
+
+            //do logic to show a popup here..
+
+    }}
+    }
+);
+
+function PopUpBook(){
+
+    //Makes a method call to Book.Call() 
+    //This is a call to the constructor of the super class (the class being inherited from). 
+    //If the super class has a constructor that takes parameters, 
+    //..this method would enable you to pass the parameter values to the super-class constructors 
+    //..for object initialization.
+    Book.call(this);
+}
+PopUpBook.prototype = Book.prototype;
+PopUpBook.prototype.hasSound = false;
+PopUpBook.prototype.showPopUp = function ShowPop() {};

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Handling DOM Events</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" type="text/css" href="../css/handlingDOMevents.css" />
+</head>
+
+<body>
+<!-- The DOM provides these events via the JavaScript API. -->
+
+<input id="aRange" type="range" max="200" min="0" value="0" />
+<input id="aText" type="text"/>
+<div id="rangeValue"></div> 
+
+<form name="TextForm" method="get" action="">
+<label for="">First Name:</label>
+<input type="text" name="firstNameText" value="" id="firstNameText" maxlength="30" />
+<label for="" id="ruleViolation"></label>
+</form>
+
+<!-- Keyboard events: -->
+<input type="text" id="firstNameText2" />
+<label for="text" id="outputText"></label>
+
+<div id="yellowBox" style=width: 50%;height:50%;margin: 0 auto; background-color:yellow;> </div>
+
+<noscript>Please try another browser this one is not supported. </noscript>
+<script type="text/javascript" src="../js/handlingDOMevents.js"></script>
+</body>
+</html>
+
+<!-- EXAM TIP:
+In some cases, depending on the key, only the keydown event fires. The arrow keys are such an example: keydown fires but not keyup or keypress. -->

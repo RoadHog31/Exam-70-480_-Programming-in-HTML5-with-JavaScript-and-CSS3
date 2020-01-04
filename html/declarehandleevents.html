@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title> Declaring and handling bubbled events </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/declarehandleevents.css" />
+	</head>
+
+	<body id="bod">
+
+	<!-- One click event of blue triggered all three events to fire. This concept is called event bubbling.  -->
+		<div id="outer">
+			<div id="middle">		
+				<div id="inner">
+				</div>
+			</div>
+		</div>
+		
+	<ol id="eventOrder"><!-- li appended here --></ol>
+	<button type="button" id="clearButton"> Clear </button>
+		
+	<script src="../js/declarehandleevents.js"> </script>
+	</body>
+</html>
+
+

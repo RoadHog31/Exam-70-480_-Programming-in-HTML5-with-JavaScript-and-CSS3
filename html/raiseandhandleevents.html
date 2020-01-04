@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Events!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<!-- The idea of hooking up an event is to tell the browser that when a certain event occurs, it should call a specified function. The function assigned to an event is said to be an event listener listening for that event. -->
+<!-- The onload event fires when the document itself is fully loaded into the browser.  -->
+<body onload="onloadHandler();">
+
+		<!-- 
+		
+		<element event='some JavaScript'>
+
+			OR
+
+		<element event="some JavaScript"> 
+		
+		-->
+				
+		<button onclick="document.getElementById('demo').innerHTML = Date()" >The Time is?</button>
+		
+			<p id="demo"></P>
+		
+<!-- For this to succeed, the window object must exist. Since the window object is a global object it will exist. However, to access elements of the page, the page must be loaded or the script must run after the renderer processes the HTML.  For example, if the page has a canvas and the functionality to enable users to draw on it with a mouse, the event handlers for the mouse activities would have to be assigned either at the bottom of the page or within the window’s onload event. The onload event is triggered when the entire page is loaded, so it’s possible to get a reference to the page elements and hook up the event handlers.-->
+
+<!-- addEventListenerand removeEventListener are the two preferred methods to hook up a func-tion to an event and then to remove it later as needed. 
+
+The addEventListener method accepts two required parameters and one optional parameter:
+addEventListener(<event name (handler)>,<event function (listener)>,<optional cascade rule>) 
+
+The removeEventListener takes exactly the same parameters. 
+Note: An anonymous function this function doesn’t have a name and can’t be called by any other code. -->
+
+<script type="text/javascript" src="../js/raiseandhandleevents.js"></script>
+<script> function onloadHandler(){
+		alert("Hello Event.");
+	}</script>
+	
+<script>
+<!-- You can use anonymous functions in most cases where a function is expected as a parameter also.  -->
+
+<!-- The function object is assigned to the onload property of Window object. Which in turn handles the event when the window is completely loaded. -->
+	window.onload = onloadHandler();
+	
+	function onloadHandler(){
+	alert("Hello Event 2!");
+	}</script>
+	
+	<script>     
+	window.addEventListener("load", onloadHandler, false);        
+	window.addEventListener("load", onloadHandler2, false);     
+	window.addEventListener("load", onloadHandler3, false);     
+	
+	function onloadHandler() { 
+		alert("hello event 1.");     
+		}     
+	function onloadHandler2() { 
+		alert("hello event 2.");     
+		}     
+	function onloadHandler3() { 
+		alert("hello event 3.");     
+		} 	
+<!-- Each event fires in the order in which it was added when the window is finished loading. To remove the onloadHandler2 event, all that’s needed is a call to the removeEventListener:	 -->	
+	window.removeEventListener("load", onloadHandler2, false);
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+#firstNameText{
+	
+	margin: 100px;
+	padding: 100px;
+}
+
+#outputText{
+	
+	padding: 10px;
+	margin: 500px;	
+	
+}
+
+#rangeValue(
+
+	padding: 10px;
+	margin: 500px;	
+
+)
+
+#yellowBox{
+	
+	width: 50%;
+	height: 50%;
+	position: relative;
+	top: 25%;
+	left: 25%;
+	background-color: green;
+}
+
+.scale{
+	
+	transform:scale(1.5);
+	
+}

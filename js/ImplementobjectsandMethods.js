@@ -4,6 +4,14 @@
 -Implement inheritance
 -Implement native methods and create custom methods */
 
+/* In JavaScript, objects are king. If you understand objects, you understand JavaScript.
+
+In JavaScript, almost "everything" is an object.
+
+All JavaScript values, except primitives, are objects.
+
+You define a function with parameters, you call a function with arguments.*/
+
 //static object in Global namespace
 var squareVal = Math.sqrt(144);
 
@@ -115,11 +123,16 @@ Author.prototype = {
 var books = new Array(new Book(), new Book("First Edition", 350, new Author("Stephen", "Pino", "M")));
 
 //Implementing inheritance...
-//(Extending is another way of thinking about inheritance —
+//The Object.prototype is on the top of the prototype inheritance chain:
+//Date objects, Array objects, and Person objects inherit from Object.prototype.
+//( Extending is another way of thinking about inheritance —
 //..an object is extended into another object.) 
 //Object.create is a method available from the Object class in the global namespace. 
+//Essentially, you define this additional prototype information inline with the object creation. 
+//Creating a prototype here...
 var popupBook = Object.create(Book.prototype, 
     
+	//Alias..
     { hasSound: {value:true},
     showPopUp:{ value: function showPop()
     {
@@ -132,13 +145,96 @@ var popupBook = Object.create(Book.prototype,
 
 function PopUpBook(){
 
-    //Makes a method call to Book.Call() 
+    //Makes a method call to Book.call() 
     //This is a call to the constructor of the super class (the class being inherited from). 
     //If the super class has a constructor that takes parameters, 
     //..this method would enable you to pass the parameter values to the super-class constructors 
     //..for object initialization.
     Book.call(this);
 }
+//Inheritance from a book prototype. 
 PopUpBook.prototype = Book.prototype;
 PopUpBook.prototype.hasSound = false;
 PopUpBook.prototype.showPopUp = function ShowPop() {};
+
+//JavaScript Object Constructor Function example (start with capitals)
+// Constructor function for Person objects
+//In a constructor function "this" does not have a value... 
+//It is a substitute for the new object. 
+//The value of "this" will become the new object when a new object is created.
+//Also to add a new property to a constructor, you must add it to the constructor function:
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+//Objects of the same type are created by calling the constructor function with the new keyword:
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+//JavaScript has object versions of the primitive data types String, Number, and Boolean. But there is no reason to create complex objects. Primitive values are much faster.
+var x1 = {};            // new object
+var x2 = "";            // new primitive string
+var x3 = 0;             // new primitive number
+var x4 = false;         // new primitive boolean
+var x5 = [];            // new array object
+var x6 = /()/           // new regexp object
+var x7 = function(){};  // new function object 
+
+//ES5 New Object Methods
+// Adding or changing an object property
+Object.defineProperty(object, property, descriptor)
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "EN"
+};
+// Change a property
+Object.defineProperty(person, "language", {value : "NO"}); 
+
+// Adding or changing many object properties
+Object.defineProperties(object, descriptors)
+
+// Accessing Properties
+Object.getOwnPropertyDescriptor(object, property)
+
+// Returns all properties as an array
+Object.getOwnPropertyNames(object)
+
+// Returns enumerable properties as an array
+Object.keys(object)
+
+// Accessing the prototype
+Object.getPrototypeOf(object)
+
+// Prevents adding properties to an object
+Object.preventExtensions(object)
+
+// Returns true if properties can be added to an object
+Object.isExtensible(object)
+
+// Prevents changes of object properties (not values)
+Object.seal(object)
+
+// Returns true if object is sealed
+Object.isSealed(object)
+
+// Prevents any changes to an object
+Object.freeze(object)
+
+// Returns true if object is frozen
+Object.isFrozen(object)
+
+
+
+
+
+
+
+
+
+
+

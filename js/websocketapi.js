@@ -8,7 +8,9 @@ TheWebSocket constructor accepts two parameters:
 
 	*An optional list of subprotocols
 
-When the WebSocket constructor is called, the WebSocket API establishes a connection to the server. One of two things can happen at this stage. The WebSocket will successfully connect to the server or the connection will fail, resulting in an error. B*/
+When the WebSocket constructor is called, the WebSocket API establishes a connection to the server. One of two things can happen at this stage. The WebSocket will successfully connect to the server or the connection will fail, resulting in an error. B
+
+Note: The concept of real-time chat or real-time communications isn’t new. However, HTML5 Web-Sockets make the concept easier than ever to implement in HTML5 webpages. Implementing this type of application is beyond the scope of the book but is very useful in understanding the power that WebSockets provide. The following URL provides many search results that provide examples: http://www.bing.com/search?q=WebSocket+JavaScript+chat+application.AJAX provides asynchronous communication but doesn’t provide a bidirectional function-ality that can deliver real-time communications.*/
 
 window.onload = function() {
 	

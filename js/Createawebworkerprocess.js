@@ -31,9 +31,9 @@ window.onload = function () {
 
                 //DoIntensiveWork();
                 /*In this code, the pattern described in the previous section is implemented. A new Workerobject is instantiated with CalculateWorker.js specified. Then the onmessage is assigned a function to handle the result of the worker thread. The onerror is assigned a function to handle any error conditions. Finally, the postMessage is called to invoke the worker. */
-                let result = document.getElementById("workResult");
+                var result = document.getElementById("workResult");
                 result.innerText = "";
-                let worker = new Worker("CalculateWorker.js");
+                var worker = new Worker("CalculateWorker.js");
                 worker.onmessage = function (evt){
                     try {
                         result.innerText = evt.data;
@@ -49,18 +49,18 @@ window.onload = function () {
                     alert(err.message + err.filename + err.lineno);
                 }
 
-                    worker.postMessage("");
-                    document.getElementById("stopWorker").onclick = function () {  
+                worker.postMessage("");
+                document.getElementById("stopWorker").onclick = function () {  
 
-                        worker.terminate();
-                        
-                    }
+                    worker.terminate();
+                    
+                }
 
             }
             document.onkeydown = function () {                                       
                 
                 switch (window.event.keyCode) {                           
-                    case 40:                                                                        horizontal = false;                               
+                    case 40:                                                                                horizontal = false;                               
                             hd = "d";                               
                             break;                           
                     case 37:                               
@@ -71,7 +71,7 @@ window.onload = function () {
                             horizontal = false;                               
                             hd = "u";                               
                             break;                           
-                    case 39:                                                                        horizontal = true;                               
+                    case 39:                                                                                horizontal = true;                               
                             hd = "r";                               
                             break;                      
                 }                  
@@ -115,9 +115,9 @@ function setNewPoint(d) {
             switch (horizontal) {                       
                 case true:                           
                         if (x < (w - r) && hd == "r")                               
-                        x += s;                           
+                            x += s;                           
                         else if(x > r && hd == "l")                               
-                        x -= s;                           
+                            x -= s;                           
                         break;                       
                 case false:                          
                         if (y < (h - r) && hd == "d")                              
@@ -127,14 +127,14 @@ function setNewPoint(d) {
                         break;                 
                 }                  
         
-                    if (x >= (w - r))                       
-                    hd = "l";                              
+                        if (x >= (w - r))                       
+                            hd = "l";                              
                         if (x <= r)                      
-                        hd = "r";                   
+                            hd = "r";                   
                         if (y >= (h - r))                       
-                        hd = "u";                  
+                            hd = "u";                  
                         if (y <= r)                       
-                        hd = "d";               
+                            hd = "d";               
         } 
         catch (e) {                   
                                 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Validate via HTML5</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <p>HTML5 markup for a customer survey:</p>
+    <div>
+      <form>
+        <div>
+          <hgroup>
+            <h1>Customer Satisfaction is #1</h1>
+            <h2>Please take the time to fill out the following survey</h2>
+          </hgroup>
+        </div>
+        <table>
+          <tr>
+            <td>Your Secret Code:</td>
+            <td>
+              <!-- The <input> element in HTML denotes input controls. This element contains a type attri-ute that specifies the type of input element to render.  -->
+              <input type="text" readonly="readonly" value="00XY998BB" />
+            </td>
+          </tr>
+          <!-- EXAM TIP
+          You can’t specify default text in a password box or write to it via JavaScript. This is a security safeguard to help ensure the safety of passwords. However, the browsers provide a mechanism to store a password should a user choose to have the password remembered by the browser -->
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <td>First Name:</td>
+            <td>
+              <input type="text" id="firstNameText" maxlength="50" />
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name:</td>
+            <td><input type="text" id="lastNameText" /></td>
+          </tr>
+          <tr>
+            <!-- Formats entered data as a properly formatted URL -->
+            <td>Your favorite website:</td>
+            <td><input type="url" /></td>
+          </tr>
+          <tr>
+            <td>Your age in years:</td>
+            <td><input type="number" /></td>
+          </tr>
+          <tr>
+            <td>What colors have you colored your hair:</td>
+            <td>
+              <input type="checkbox" id="chkBrown" checked="checked" /> Brown
+              <input type="checkbox" id="chkBlonde" /> Blonde
+              <input type="checkbox" id="chkBlack" /> Black
+              <input type="checkbox" id="chkRed" /> Red
+              <input type="checkbox" id="chkNone" /> None
+            </td>
+          </tr>
+          <!-- The difference from the check box is that users can select only a single item from the list. An example would be asking users to rate something on a scale from 1 to 5.  -->
+          <tr>
+            <td>Rate your experience:</td>
+            <td>
+              <input type="radio" id="chkOne" name="experience" /> 1 - Very Poor
+              <input type="radio" id="chkTwo" name="experience" />
+              <input type="radio" id="chkThree" name="experience" /> 3
+              <input type="radio" id="chkFour" name="experience" /> 4
+              <input
+                type="radio"
+                id="chkFive"
+                name="experience"
+                checked="checked"
+              />
+              5 - Very Good
+            </td>
+          </tr>
+          <!-- This type can be used in cases where a wider range of values is required to choose from but using radio buttons would be too unwieldy. -->
+          <tr>
+            <td>How likely would you recommend the product:</td>
+            <td>
+              <br />
+              <br />
+              <br />
+              <br />
+              <input type="range" min="1" max="25" value="20" />
+            </td>
+          </tr>
+          <tr>
+            <td>Other Comments:</td>
+            <td>
+              <textarea
+                id="otherCommentsText"
+                rows="5"
+                cols="20"
+                spellcheck="true"
+              >
+              </textarea>
+            </td>
+          </tr>
+          <!-- EXAM TIP: 
+          Validation of the email input type confirms only that the information entered matches the expected format of a valid email address. It in no way verifies that the email address itself is a valid mailbox that can receive messages.
+        
+        This can be achieved by using the pattern attribute, which allows the use of a regular expression to define the pattern that should be accepted.
+        
+        EXAM TIP
+        The pattern attribute applies only to text boxes. It can’t be used to override the validation built into the email or url types.-
+        input type="text" title="Only .com and .ca are permitted." pattern="^[a-zA-Z0-9\-\.]+\.(com|ca)$"/>  -->
+          <tr>
+            <td>Email address:</td>
+            <td>
+              <input type="email" placeholder="me@mydomain.com" required />
+            </td>
+          </tr>
+          <!-- Buttons are what tell the website when a user finishes doing something and that they want to perform an action. The <input> element supports three types of button controls: submit, reset, and button.
+          
+          EXAM TIP: 
+          Anything can be a “button.” Because most DOM elements have a click event or at least a mousedown and mouseup event, the concept of clicking can be captured and custom actions processed. This can inherently turn any part of the DOM into a ”button.” -->
+          <tr>
+            <td>
+              <input type="submit" />
+              <input type="reset" />
+              <input type="button" value="Cancel" />
+            </td>
+          </tr>
+
+          <!-- EXAM TIP: You can validate data in many ways. Even more options become available in HTML5, such as the url input type. Also available are the pattern attribute and the use of regular expressions in JavaScript. Both of these are discussed later in this chapter -->
+          <tr>
+            <td>Last Name:</td>
+            <td><input type="text" id="lastNameText" /></td>
+          </tr>
+          <tr>
+            <td>Your favorite website:</td>
+            <td><input type="url" /></td>
+          </tr>
+          <tr>
+            <td>Other Comments:</td>
+            <td>
+              <textarea
+                id="otherCommentsText"
+                rows="5"
+                cols="20"
+                spellcheck="true"
+              >
+              </textarea>
+            </td>
+          </tr>
+          ...
+          <tr>
+            <td><input type="submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script src="validateviaHTML5.js" async defer></script>
+  </body>
+</html>

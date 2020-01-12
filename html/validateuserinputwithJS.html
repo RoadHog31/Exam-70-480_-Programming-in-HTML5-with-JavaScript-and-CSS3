@@ -25,9 +25,37 @@
       This objective demonstrates how to use regular expressions to validate the
       input format and how to use the JavaScript built-in functions to ensure
       that data is the correct data type. This objective also adds a layer of
-      security by demonstrating how to prevent malicious code injection
+      security by demonstrating how to prevent malicious code injection. Regular
+      expressions are a mix of special characters and literal characters that
+      make up the pattern that someone would want to match. 
+      <aside>EXAM TIP: Regular
+      expressions tend to make their way onto the exams. You should prepare by
+      studying them in more detail. An Internet search should yield many
+      resources freely available on the topic. Be familiar with how to read an
+      expression for such things as email addresses, URLs, and phone numbers,
+      among other things.</aside>
     </div>
+    <p> A1A 1A1 </p>
+        </br>
+    <!-- EXAM TIP 
+    The pattern attribute applies only to text boxes. It can’t be used to override the validation built into the email or url types. HTML example. -->
+    <input type="text" title="Only Canadian postcodes permitted." pattern="^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d"/>
+    
+    <form>        
+        <input type="text" id="regExString" />        
+        <button onclick="CheckString();" >Evaluate</button>    
+    </form>
+        </br>
+    <form>        
+        <input type="text" id="regExString" />        
+        <button onclick="CheckStringExec();" >Evaluate with exec JS method</button>    
+    </form>
 
-    <script src="validateuserinputwithJS.js" async defer></script>
+
+    <script src="../js/validateuserinputwithJS.js" async defer></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </body>
 </html>
+
+

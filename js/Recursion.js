@@ -23,7 +23,7 @@ To use the recursive method, perform the following actions:
 
 3.  Add the following method to the Program.cs class:  
 
-	public static int Factorial(int n)  {         
+	public Factorial(n)  {         
 
 			if (n == 0)    {              
 			
@@ -53,13 +53,3 @@ As seen in the above exercise, a recursive solution has two distinct parts:
 • Base case: This is the part that specifies the terminating condition and doesn’t call the method again. The base case in the Factorial method is n == 0. If you don’t have a base case in your recursive algorithm, you create an infinite recursion. An infinite recursion will cause your computer to run out of memory and throw a System.StackOverflowException exception.
 
 • Recursive case: This is the part that moves the algorithm toward the base case. The recursive case in the Factorial method is the else part, where you call the method again but with a smaller value progressing toward the base case. */
-
-
-
-
-
-
-
-
-
-

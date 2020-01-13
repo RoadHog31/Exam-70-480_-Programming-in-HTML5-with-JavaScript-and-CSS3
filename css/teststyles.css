@@ -1,0 +1,231 @@
+/* EXAM TIP:
+Be aware that certain font types will work in some browsers but not others. It is important to declare each font type by using @font-face so that the browser has access to the one it needs. */
+
+/* Every HTML element is a box and has the properties of a box such as height and width. */
+
+h1 {
+
+    /* Hexadecimal value: RGB code*/
+    color: #00FF00;
+}
+
+h2 {
+
+    /* Color name: */
+    color: green;
+}
+
+h3 {
+
+    /* RGB function: */
+    color: rgb(0, 255, 0);
+}
+
+h4 {
+    /* The font-weight CSS property accepts the following values to specify how bold you would like the text to be: lighter, normal, bold, and bolder. In addition,
+    the numeric values 100 (lighter) to 900 (darker) are supported. The values increase by 100, providing nine values in total to control the weight of the text. */
+    font-weight: bold;
+}
+
+.italic {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+/* There are many custom fonts avail-able on the Internet for inclusion in your web applications. These fonts are known as WOFF (Web Open Font Format). To use these fonts in your webpage, you define a font family using the special keyword @font-face.
+The following code defines a @font-face for a webpage and implements it for the <p>elements of the page: */
+
+@font-face {
+
+    font-family: "My Nicer Font";
+    src: url('fonts/my_woff_font.eot');
+    src: url('fonts/my_woff_font.woff');
+}
+
+/* Then use font-face... */
+p {
+    font-family: "My Nicer Font";
+}
+
+/* This could be from the local web server if you downloaded the fonts to it or from an Internet source. In the previous declaration, both eot and woff types are specified. */
+
+/* Test Size:
+
+Instead you can use the font-size property. The font-sizeproperty accepts relative values that when rendered are relative to the default text size in the browser. The available values are: 
+xx-small,
+x-small,
+small,
+smaller,
+medium,
+larger,
+large,
+x-large,
+xx-large. 
+The following code demonstrates setting the font-size for the <p>elements: */
+
+p {
+    font-size: x-large;
+    /* Text indenting example */
+    text-indent: 50px;
+    /* Text spacing examples */
+    letter-spacing: 8px;
+    word-spacing: 8px;
+}
+
+/* Text Hyphenation:
+Applying styles to text hyphenation allows you to control how a sentence or word wraps or breaks at the end of the line. The hyphenattribute can be specified to control this behavior. &shy; (soft hyphen) notation*/
+
+div {
+
+    hyphens: none;
+
+}
+
+/* jQuery is the easiest way to achieve changing CSS styles dynamically. JavaScript will do the trick as well. All the CSS properties that have been looked at are available to be changed dy-namically. So for example,
+in the following code,
+the color of the button is changed to green when it is clicked: */
+
+/* $("document").ready(function () {
+        $("#changeStyle").click(function () {
+                $(this).css("color", "green");
+            }
+
+        );
+    }
+
+); */
+
+/* EXAM TIP
+The border element supports many variants in its ability to set properties in a single line. Take some time to experiment with all the possible combinations so you will be able to read them and identify them easily on the exam. */
+.borderProperties {
+
+    /* position: absolute; */
+    border: red dotted 6px;
+    border-radius: 5px;
+    border-left: 25px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    box-shadow: 50px 50px blueviolet;
+    /* NOTE UNDERSTANDING H-SHADOW AND V-SHADOW PARAMETERS
+    h-shadow and v-shadow parameters can accept negative values. To place the shadow on the left side of the box instead of the right, specify a negative value for the h-shadow. To place the shadow on top of the box instead of the bottom,
+    specify a negative value for the v-shadow parameter. */
+
+    text-shadow: cornflowerblue -100px -100px;
+
+}
+
+.changeStyle {
+
+    margin: 50px;
+}
+
+.playImage {
+
+    position: absolute;
+    clip: rect(100px, 150px, 150px, 100px);
+
+}
+
+.playImage2 {
+
+    /* margin-left: 400px; */
+}
+
+/* NOTE UNDERSTANDING THE CLIP PROPERTY
+The clip property works only on elements whose position is set as fixed or absolute. */
+
+/* Apply styles to establish and change an element’s position:
+
+EXAM TIP
+For the exam, be sure you understand that each HTML element is a box and each box be-gins its own new coordinate system. If you place a div element on the page at (50px, 50px),
+any elements placed inside it are not placed at a coordinate starting at (50px, 50px) just because that is where the div element is. The child elements inside the div start at coor-dinate (0, 0), which is the top left corner of the div itself. All child elements are positioned relative to the container in which they are placed. 
+
+The position property allows you to specify one of three different options: fixed,
+relative, or absolute. With fixed positioning, elements are placed relative to the browser window. With relative positioning, elements are positioned relative to their position in normal flow. With absolute positioning, the element is positioned relative to its first parent element. */
+
+.divPosition {
+
+    position: relative;
+    left: -25px;
+
+
+}
+
+/* EXAM TIP:
+The left and right properties start their measurements from the outer-most edge of the box. For the exam, keep in mind that if there are margins or padding specified,
+this will influence the position of the object as well. */
+
+img:nth-child(1n+0) {
+
+    position: relative;
+    left: -25px;
+    top: 25px;
+}
+
+img:nth-child(2) {
+    position: relative;
+    left: -25px;
+}
+
+img:nth-child(3) {
+    position: relative;
+    left: -50px;
+}
+
+img:nth-child(4) {
+    position: relative;
+    left: -75px;
+}
+
+img:nth-child(5) {
+    position: relative;
+    left: -25px;
+}
+
+img:nth-child(6) {
+    position: relative;
+    left: -50px;
+}
+
+img:nth-child(7) {
+    position: relative;
+    left: -75px;
+}
+
+/* EXAM TIP:
+When overlapping elements using "absolute positioning", CSS provides az-index property. This allows you to specify in what order the elements should stack on the page along the z-axis (the third dimension !). */
+
+.backarrow {
+    float: left;
+    left: 215px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+
+.keanu {
+    float: right;
+    left: 215px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+
+.keanu2 {
+    float: right;
+    left: 215px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+
+/* Exercise */
+
+/* p {
+
+    position: fixed;
+    left: 1px;
+} */

@@ -108,5 +108,3 @@ $("form").submit(function () {
 });
 
 // In this case, the jQuery.serialize method handles the extraction of the data from all the input elements and creates the query string.The advantage of using this method— beyond saving a lot of code— is that the query string is also encoded.
-
- 

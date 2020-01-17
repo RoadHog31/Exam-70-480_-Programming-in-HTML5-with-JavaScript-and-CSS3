@@ -1,6 +1,10 @@
 //@ts-check
 'use strict';
 
+let mii = 10;
+
+console.log(mii);
+
 //let me = "me";
 
 //insert console message in the chrome web dev tool console.
@@ -98,4 +102,3 @@ function pause() {
 function back() {
     video.currentTime -= 10;
 }*/
-

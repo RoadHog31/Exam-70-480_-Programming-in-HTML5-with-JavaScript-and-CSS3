@@ -1,2 +1,122 @@
+p {
+    border: inherit;
+}
+
+span {
+    color: blue;
+    border: 1px solid black;
+    /* border: dashed red; */
+}
+
+/* border properties */
+b {
+    /* style */
+    border: solid;
+
+    /* width | style */
+    border: 2px dotted;
+
+    /* style | color */
+    border: outset #f33;
+
+    /* width | style | color */
+    border: medium dashed green;
+
+    /* Global values */
+    border: inherit;
+    border: initial;
+    border: unset;
+}
+
+.divBorder {
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+}
+
+/* Padding properties */
+p {
+    /* Apply to all four sides */
+    padding: 1em;
+
+    /* vertical | horizontal */
+    padding: 5% 10%;
+
+    /* top | horizontal | bottom */
+    padding: 1em 2em 2em;
+
+    /* top | right | bottom | left */
+    padding: 5px 1em 0 2em;
+
+    /* Global values */
+    padding: inherit;
+    padding: initial;
+    padding: unset;
+
+}
+
+.flex {
+
+    display: flex;
+}
+
+/* Highligting different color CSS Selector.. */
+a[href ^="https://"] {
+
+    color: red;
+}
+
+/* <a> elements with a title attribute */
+a[title] {
+    color: purple;
+}
+
+/* <a> elements with an href matching "https://example.org" */
+a[href="https://example.org"] {
+    color: green;
+}
+
+/* <a> elements with an href containing "example" */
+a[href*="example"] {
+    font-size: 2em;
+}
+
+/* <a> elements with an href ending ".org" */
+a[href$=".org"] {
+    font-style: italic;
+}
+
+/* <a> elements whose class attribute contains the word "logo" */
+a[class~="logo"] {
+    padding: 2px;
+}
+
+/* two sidebars for adverts */
+@media screen and (max-width: 480px) {
+
+    .adbar {
+        display: none
+    }
+}
 
 
+/* Transitions */
+.div1 {
+
+    width: 300px;
+    height: 600px;
+    background: lightgrey;
+    transition: width 250ms;
+
+}
+
+.div1:hover {
+
+    border: solid 3px blue;
+    width: 400px;
+}

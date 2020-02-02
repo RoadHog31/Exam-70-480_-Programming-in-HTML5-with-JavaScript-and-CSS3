@@ -1,0 +1,20 @@
+/* EXAM TIP:
+Whenever you see a property with the same name prefix as with the column-rule property,
+you can know that there is a shorthand mechanism to specify the most common properties in one line.
+
+*/
+
+p {
+
+    width: 80%;
+    padding-left: 50px;
+}
+
+img {
+
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    -ms-wrap-flow: clear;
+    -ms-wrap-margin: 15px;
+}

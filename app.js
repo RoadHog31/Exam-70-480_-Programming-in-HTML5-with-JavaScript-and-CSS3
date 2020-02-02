@@ -2,7 +2,6 @@
 'use strict';
 
 let mii = 10;
-
 console.log(mii);
 
 //let me = "me";
@@ -40,7 +39,7 @@ alert(element.innerHTML);*/
 
 /*window.onload = function () {
   var paragraphs = document.getElementsByClassName("subPara");
-  alert("<p> elements with class subPara: " +           paragraphs.length);
+  alert("<p> elements with class subPara: " + paragraphs.length);
 }*/
 
 /*window.onload = function () {

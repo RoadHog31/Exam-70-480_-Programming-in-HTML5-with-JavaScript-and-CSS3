@@ -1,0 +1,157 @@
+/* EXAM TIP: */
+
+
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+}
+
+#blogPage {
+
+    display: grid;
+    columns: 15% 1fr 25%;
+    grid-row: 20% 20% 20% 20% 20%;
+    width: 90%;
+    height: 95%;
+    border: 1px dotted black;
+    margin: auto;
+}
+
+#blogPage>header {
+
+    grid-column: 1;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    border: 1px dotted black;
+}
+
+#blogPage>footer {
+
+    grid-column: 1/4;
+    grid-row: 5;
+    -ms-grid-column-span: 3;
+    border: 1px dotted black;
+}
+
+#blogPage>article {
+
+    grid-column: 2;
+    grid-row: 2;
+    grid-row: 2 / 5;
+    border: 1px dotted black;
+    color: burlywood;
+    background-color: blueviolet;
+}
+
+#blogPage>#calendar {
+
+    grid-column: 3;
+    grid-row: 3;
+    border: 1px dotted black;
+}
+
+#blogPage>#blogRoll {
+
+    grid-column: 3;
+    grid-row: 4;
+    border: 1px dotted black;
+
+}
+
+#blogPage>#aboutMe {
+
+    grid-column: 1;
+    grid-row: 2;
+    grid-row: 2 / 5;
+    border: 1px dotted black;
+}
+
+#blogPage>#blogHistory {
+
+    grid-column: 3;
+    grid-row: 2;
+    border: 1px dotted black;
+
+}
+
+#blogPage>#Keanu {
+
+    grid-column: 3;
+    grid-row: 3 / 4;
+    border: 1px dotted black;
+    margin: 50px;
+}
+
+
+/* Flex box */
+/* EXAM TIP:
+The flexbox is oriented based on the flex direction. The flex direction is based on the layout axis. If the layout of the flexbox is column, the layout axis is vertical. If the flexbox layout is row, the layout axis is horizontal. For the exam, this is important to understand in order to know how other properties on the flex grid will be rendered. */
+
+/* Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves. There are only a handful of values that are commonly used: */
+
+div1 {
+    display: inline;
+    /* Default of all elements, unless UA stylesheet overrides */
+    display: inline-block;
+    /* Characteristics of block, but sits on a line */
+    display: block;
+    /* UA stylesheet makes things like <div> and <section> block */
+    display: run-in;
+    /* Not particularly well supported or common */
+    display: none;
+    /* Hide */
+}
+
+/* EXAM TIP
+On the exam, you might see the shorthand version of what you have just done with the wrapping. The flex-flow property supports specifying the wrap style as the second parameter: flex-flow: row wrap. */
+
+#flexbox1 {
+    display: flex;
+    flex-flow: wrap;
+    border: 1px solid black;
+    margin-top: 100px;
+    min-height: 15px;
+
+}
+
+
+#flexbox1>div {
+
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+/* Styling the Flexbox Div's and its child div elements */
+#flexbox1>div:nth-child(1) {
+
+    background-color: green;
+
+}
+
+#flexbox1>div:nth-child(2) {
+
+    background-color: yellow;
+
+}
+
+#flexbox1>div:nth-child(3) {
+
+    background-color: red;
+
+}
+
+#flexbox1>div:nth-child(4) {
+
+    background-color: purple;
+
+}
+
+#flexbox1>div:nth-child(5) {
+
+    background-color: blue;
+
+}

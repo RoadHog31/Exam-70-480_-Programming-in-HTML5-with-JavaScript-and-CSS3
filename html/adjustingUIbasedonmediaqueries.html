@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      Adjust a UI based on media queries
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/adjustingUIbasedonmediaqueries.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 1200px)"
+      href="Desktop.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1199px) and (min-width: 401px)"
+      ref="tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 400px)"
+      href="phone.css"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div id="blogPage">
+      <header>
+        My Blog Header
+        <!-- A  div element set up as a flexbox -->
+        <div id="flexbox1">
+          <div>Greenie</div>
+          <div>Yellow</div>
+          <div>Red</div>
+          <div>Purple</div>
+          <div>Blue</div>
+        </div>
+      </header>
+      <article>
+        My Blogs Main Body! 1
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ante
+          libero, blandit at quam eu, rhoncus faucibus nisi. Duis semper
+          eleifend euismod.
+        </p>
+      </article>
+      <footer>My Blog Footer 2</footer>
+      <aside id="Keanu">
+        Keanu!1
+      </aside>
+      <aside id="calendar">A calendar 2</aside>
+      <aside id="blogRoll">
+        My Favourite Blogs 3
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ante
+          libero, blandit at quam eu, rhoncus faucibus nisi. Duis semper
+          eleifend euismod. Proin sollicitudin sodales dolor, id imperdiet magna
+          sagittis nec. Sed sit amet diam quis nisi imperdiet luctus. Nulla
+          facilisi.
+        </p>
+      </aside>
+      <aside id="aboutMe">Who am I? 4</aside>
+      <aside id="blogHistory">
+        MyBlog History 5
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ante
+          libero, blandit at quam eu, rhoncus faucibus nisi. Duis semper
+          eleifend euismod.
+        </p>
+      </aside>
+    </div>
+
+    <button id="myButton" class="disableIt">My Button</button>
+
+    <script src="../js/adjustingUIbasedonmediaqueries.js" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+/* EXAM TIP: 
+
+Since the regions feature is still experimental, the exam is not likely to cover this topic. However, this is only at the time of writing and could change at any time. Be familiar and keep checking on updates with respect to the readiness of this CSS construct in the real world.*/
+
+.content_source {
+
+    /* flow-into: myflow; */
+}
+
+.content_regions {
+
+    /* flow-from: myflow; */
+}

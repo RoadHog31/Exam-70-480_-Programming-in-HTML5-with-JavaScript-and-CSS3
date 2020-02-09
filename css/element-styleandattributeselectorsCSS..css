@@ -1,0 +1,116 @@
+/* */
+
+myhiddenelements {
+    visibility: hidden;
+}
+
+/* By setting the visibility to hidden, the control is not visible to the end user of the web-page. When hiding an element using the visibility property, the overall layout still behaves as though the element is there. */
+
+/* If you prefer to have the element hidden and the layout behave as though it is not there,
+the display property should be used as shown in the following code: */
+
+.myhiddenelements {
+    display: none;
+}
+
+/* With the display property, the element is not visible and the layout is not affected by it.  */
+
+.disableIt
+
+/* The following example shows how to hide a check box when a user clicks it. */
+input[type="checkbox"]:checked {
+    display: none;
+}
+
+
+/*Finding elements by using pseudo-elements and pseudo-classes:
+
+:first-childThe :first-child pseudo-element applies the specified styles to the first instance of the element that occurs in a list,
+for example,
+the first paragraph element in this HTML:
+
+<div>
+<p>Lorem Ipsum ...</p>
+<p>Lorem Ipsum ...</p>
+<p>Lorem Ipsum ...</p>
+<p>Lorem Ipsum ...</p>
+</div>
+
+The following CSS will change the text color to green in the first paragraph element: */
+p:first-child {
+    color: green;
+}
+
+
+p::first-letter {
+
+    font-size: xx-large;
+}
+
+p::before {
+    content: '**';
+}
+
+p::after {
+    content: '**';
+}
+
+p::first-line {
+
+    color: green;
+    font-size: x-large;
+}
+
+input[type="checkbox"]:checked {
+    display: none;
+}
+
+input[type="checkbox"]:enabled {}
+
+/* There are a few ways to reference elements from CSS. This is known as the selector syntax. */
+
+/* Elements can be referenced from CSS by their element name. For example: */
+p {
+    /* ... */
+}
+
+article {
+    /* ... */
+}
+
+div {
+    /* ... */
+}
+
+/* In this code, styles are applied to all paragraph elements, article elements, and divelements. The next method to select elements is through the use of classes as shown here: */
+.bold {
+    /* ... */
+}
+
+.largeTitle {
+    /* ... */
+}
+
+/* In this code, the styles are applied only to HTML elements that have their class attribute assigned these class names. Element names and classes can be combined to narrow the selector even further: */
+
+p.largeTitle {
+    /* ... */
+}
+
+/* This code applies the styles only to paragraph elements that have the class largeTitle assigned to the class attribute.The most granular method to reference HTML elements from CSS is by using the id or name of the element: */
+
+#nameBox {
+    /* ... */
+}
+
+/* This code applies the specified styles only to the single element on the page with the specified name. In some cases, you might want to apply the same style to many elements of different types. In this case, you can group them and define the styles only once: */
+
+p,
+H1,
+H2 {
+    /* ... */
+}
+
+/* In this sample, all three of the HTML elements noted will have the defined styles applied to them. */
+
+/* Consider how you can get very specific styles applied to your HTML elements through the combination of pseudo-classes and pseudo-elements. For example, how would you change the appearance of the first letter of the first paragraph of each group of paragraphs on the page but only when the user hovers over it? Ex-periment with other combinations of selectors to achieve specific effects  */

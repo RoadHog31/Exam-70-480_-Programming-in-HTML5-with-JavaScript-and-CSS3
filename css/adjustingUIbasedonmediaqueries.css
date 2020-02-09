@@ -1,0 +1,202 @@
+/* This is where the concept of media queries is able to help. With the use of media queries you can create a responsive user interface that will adjust automatically as the size of the available rendered webpage changes. By using information from the browser, you are able to determine how to present your content so that it provides a user-friendly experience on any device.*/
+
+myhiddenelements {
+    visibility: hidden;
+}
+
+/* By setting the visibility to hidden,
+the control is not visible to the end user of the web-page. When hiding an element using the visibility property,
+the overall layout still behaves as though the element is there. */
+
+/* If you prefer to have the element hidden and the layout behave as though it is not there,
+the display property should be used as shown in the following code: */
+
+.myhiddenelements {
+    display: none;
+}
+
+/* With the display property, the element is not visible and the layout is not affected by it.  */
+
+.disableIt
+
+/* Grid Blog layout */
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+}
+
+/* The media query syntax is as simple as adding the following to your CSS file: 
+ @media screen and (max-width: 800px) {} */
+
+/* This is for the Blog layout... The following code adds a media query to apply the default layout to larger screens such as desktops or laptops. As long as the screen is at least 1,200 px wide, this layout will be applied.  To accommodate a tablet screen, you can adjust the layout a bit by adding the following CSS code to the page:*/
+@media screen and (max-width: 1199px) and (min-width: 401px) {
+
+    #blogPage {
+
+        display: grid;
+        grid-template-columns: 15% auto 25%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width: 90%;
+        height: 95%;
+        border: 1px dotted black;
+        margin: auto;
+    }
+
+    #blogPage>header {
+        grid-column: 1;
+        grid-column: 1/4;
+        grid-row: 1;
+        border: 1px dotted black;
+    }
+
+    #blogPage>footer {
+        grid-column: 1/4;
+        grid-row: 5;
+        -ms-grid-column-span: 3;
+        border: 1px dotted black;
+    }
+
+    #blogPage>article {
+        grid-column: 2;
+        grid-row: 2 / 5;
+        -ms-grid-row-span: 3;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#calendar {
+        grid-column: 3;
+        grid-row: 3;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#blogRoll {
+        grid-column: 3;
+        grid-row: 4;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#aboutMe {
+        grid-column: 1;
+        grid-row: 2 / 5;
+        -ms-grid-row-span: 3;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#bloghistory {
+        grid-column: 3;
+        grid-row: 2;
+        border: 1px dotted black;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    #blogPage {
+        display: grid;
+        grid-column: 50% 50%;
+        grid-row: 15% 15% 1fr 15% 15%;
+        width: 90%;
+        height: 95%;
+        border: 1px dotted black;
+        margin: auto;
+    }
+
+    #blogPage>header {
+        grid-column: 1;
+        grid-template-columns: 2;
+        grid-row: 1;
+        border: 1px dotted black;
+    }
+
+    #blogPage>footer {
+        grid-column: 1;
+        grid-row: 5;
+        grid-row: span;
+        border: 1px dotted black;
+    }
+
+    #blogPage>article {
+        grid-column: 1;
+        grid-row: 3;
+        grid-column: span 2;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#calendar {
+        grid-column: 2;
+        grid-row: 2;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#blogRoll {
+        grid-column: 1;
+        grid-row: 4;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#aboutMe {
+        grid-column: 1;
+        grid-row: 2;
+        border: 1px dotted black;
+    }
+
+    #blogPage>#bloghistory {
+        grid-column: 2;
+        grid-row: 4;
+        border: 1px dotted black;
+    }
+}
+
+
+
+/* Flexbox  */
+#flexbox1 {
+    display: flex;
+    flex-flow: wrap;
+    border: 1px solid black;
+    margin-top: 100px;
+    min-height: 15px;
+
+}
+
+
+#flexbox1>div {
+
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+/* Styling the Flexbox Div's and its child div elements */
+#flexbox1>div:nth-child(1) {
+
+    background-color: green;
+
+}
+
+#flexbox1>div:nth-child(2) {
+
+    background-color: yellow;
+
+}
+
+#flexbox1>div:nth-child(3) {
+
+    background-color: red;
+
+}
+
+#flexbox1>div:nth-child(4) {
+
+    background-color: purple;
+
+}
+
+#flexbox1>div:nth-child(5) {
+
+    background-color: blue;
+
+}

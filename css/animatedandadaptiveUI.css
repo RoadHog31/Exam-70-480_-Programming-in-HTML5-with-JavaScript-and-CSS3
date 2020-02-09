@@ -1,0 +1,24 @@
+/* EXAM TIP:
+When using the individual transition-* properties, you can specify only one property to transition. With the transition shorthand, you are able to specify a comma-separated list. */
+
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin-left: 250px;
+    margin-top: 250px;
+    transition: background-color 1s, margin-left 1s;
+
+}
+
+#div {
+
+
+    /* transition-timing-function: ease-in-out; */
+}
+
+div:hover {
+    margin-left: 350px;
+    background-color: white;
+}

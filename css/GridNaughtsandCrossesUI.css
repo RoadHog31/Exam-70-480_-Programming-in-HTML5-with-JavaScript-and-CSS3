@@ -1,0 +1,29 @@
+/* EXAM TIP: 
+
+*/
+
+.container {
+
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 1rem;
+}
+
+body {
+
+    background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+
+    background-color: dodgerblue;
+    border: 6px solid rgb(11, 0, 105);
+    border-radius: 10px;
+    background-image: radial-gradient(#348cff, #7d87f0);
+
+}

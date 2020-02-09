@@ -1,24 +1,20 @@
-/* EXAM TIP:
-Whenever you see a property with the same name prefix as with the column-rule property,
-you can know that there is a shorthand mechanism to specify the most common properties in one line.
+/* EXAM TIP: */
 
-*/
-
+/* The instructions were to the container mainGrid regarding how you wanted it to lay out its child elements. */
 #mainGrid {
 
     display: grid;
     grid-column: 150px 150px 150px 150px;
-    grid-row: 75px 75px;
-    width: 90%;
-    height: 95%;
-    border: 1px dotted black;
-    margin: auto;
+    grid-row: 85px 85px;
+
 }
 
+/* You still need to give each child element its own identity within the grid. That is, the container knows it needs to set up a four-by-two grid, but it does not know which element goes where within that four-by-two grid.*/
 #mainGrid>div:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
     background-color: blue;
+    padding: 50px;
 }
 
 #mainGrid>div:nth-child(2) {
@@ -43,6 +39,7 @@ you can know that there is a shorthand mechanism to specify the most common prop
     grid-column: 1;
     grid-row: 2;
     background-color: magenta;
+    padding: 100px;
 }
 
 #mainGrid>div:nth-child(6) {

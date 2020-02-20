@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Embedding HTML by using inline frames</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/EmbeddingHTMLbyusinginlineframes.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- You can use the <iframe> element to embed an inline frame that contains an HTML docu-ment within the current HTML document. This can be useful when you want to create reuse functionality on your site; for example, when you want to create a common header that will show on all pages of your website. This can also be useful when you want to include an HTML page from another website on your page. -->
+
+    <!-- seamless="seamless" is not supported on any browsers... -->
+    <iframe src="../html/canvas.html"> </iframe>
+    <iframe sandbox src="../html/canvas.html"> </iframe>
+
+    <!-- Working with hyperlinks -->
+    <a href="/html/svgpractice.html">SVG Practice</a>
+    <a href="http://www.contoso.com/SalesReports.html">Sales Report Page</a>
+
+    <a href="#">Top</a>
+    <a href="#BillingAddress">Go To Billing Address</a>
+
+    <br />
+    <!-- Create an <iframe> element with its name attribute set to content and then set the target 
+    of all menu links to be content  -->
+    Main Menu
+    <br />
+    <a href="Calendar.html" target="content">Calendar</a><br /><a
+      href="HumanResources.html"
+      target="content"
+      >Human Resources</a>
+      <br />
+      <a href="ExpenseReports.html" target="content">Expenses</a>
+      <br />
+      <a href="Commissions.html" target="content" >
+    </a>Commissions</a><br /><br />
+    <iframe name="content"></iframe>
+
+
+    <!-- You can use mailto protocol to send email messages. The mailto URL accepts the following parameters: subject, cc, bcc, and body. The parameters can be entered in any order by adding a question mark (?) after the email address and separating the parameters with the amper-sand (&). Some examples of an email hyperlink are as follows -->
+    <!-- basic mailto --> 
+    <a href="mailto:sales@contoso.com">Contact Sales</a>
+    
+    <!-- add the name, notice that email is wrapped with &lt; and &gt; -->
+    <a href="mailto:Joe&lt;sales@contoso.com&gt;">Contact Joe in Sales</a>
+    
+    <!-- multiple recipients comma separated --> 
+    <a href="mailto:sales@contoso.com,service@contoso.com">Contact Sales and Service</a>
+    
+    <!-- add carbon copy --> 
+    <a href="mailto:sales@contoso.com?cc=service@contoso.com">Contact Sales cc Service</a>
+    
+    <!-- add blind carbon copy --> 
+    <a href="mailto:sales@contoso.com?bcc=service@contoso.com">Contact Sales</a>
+    
+    <!-- basic mailto with message --> 
+    <a href="mailto:sales@contoso.com?body=call me.">Contact Sales with call me message</a>
+    
+    <!-- basic mailto with multi line message -->
+    <a href="mailto:sales@contoso.com?body=call me.%0AThanks">Contact Sales with multi line message</a> 
+    
+    <!-- basic mailto with subject and message -->
+    <a href="mailto:sales@contoso.com?subject=hi&body=call me.">Contact Sales with hi subject  and call me message</a>
+
+    <a href="Investments.html"><img src="../img/img/5c0.jpg" /></a>
+
+   
+
+    <!-- The following is an example of creating an image map with its areas and assigning the image map to an image. -->
+    <img src="../img/GridBlogpage.PNG" width="445" height="326" alt="World Map" usemap="#mapTest" />
+
+     <map name="mapTest">
+         <area shape="rect" coords="10, 15, 30, 25"
+         href="USA.html" alt="USA" />
+
+         <area shape="circle" coords="95, 40, 20" href="China.html" alt="China"/>
+
+         <area shape="poly" coords="97, 76, 115, 76, 113, 83, 105, 90, 97, 76" href="Australia.html" alt="Australia" />
+
+         <area shape="default" href="InvalidChoice.html" alt="Invalid" />
+     </map>
+     <!-- The coords attribute will contain x and y coordinates where 0, 0 is the top-left corner of the image. The coords attribute is set according to the shape as follows.
+        ■rect x1, y1, x2, and y2 specify the coordinates of the left, top, right, and bottom.
+        ■circle x, y, and radius specify the coordinates of the center and the radius.
+        ■poly x1, y1, x2, y2,.., xn, and yn specify the coordinates of the edges. The first and last coordinate pairs should be the same to close the polygon, but if they aren’t the same, the browser will add a closing pair. -->
+
+        <embed src="myFlashFile.swf" > </embed>
+
+        <!-- Fallback content added for non browser support -->
+        <embed src="myFlashFile.swf" >  
+            <a href="/go/getflashplayer/">    
+                <img src=http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif        alt="Get Adobe Flash player" />  
+            </a> 
+        </embed>
+
+        <!-- The <object> tag but use iframe for embedding a webpage from another domian along with sandboxing. -->
+        <object id="headerContent" standby="loading header..."    title="loading header..." width="100%" height="15%"      type="text/html" data="Header.aspx"></object>
+
+        <!-- Passing parameters to an object -->
+        <object data="tada.wav">    
+            <param name="autoplay" value="false" /> 
+        </object>
+
+    <script
+      src="../js/EmbeddingHTMLbyusinginlineframes.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>

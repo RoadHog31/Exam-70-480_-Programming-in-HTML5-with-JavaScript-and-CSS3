@@ -71,6 +71,8 @@ Using every method - checks to see if all elements are true or meets a condition
 //This is the callback function - 
 	function evenNumberCheck(value, index, array) 
 	{    return (value % 2) == 0;}
+
+	
 		
 	
 	

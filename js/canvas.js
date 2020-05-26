@@ -2,6 +2,7 @@
 'use strict';
 
 //onload event encapsulates your code and renders when page loads.
+//Function expression assigned to onload property. 
 window.onload = function () {
 
     var drawingSurface = document.getElementById("drawingSurface");

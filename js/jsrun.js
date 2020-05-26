@@ -1,7 +1,6 @@
- var i =0;
+var i =0;
 
-do{
-	
+do{	
 	i++;
 	console.log(i);
 	

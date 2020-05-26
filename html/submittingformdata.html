@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Submitting Form Data</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/submittingformdata.css" />
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- The method of the form indicates the HTTP method to use when sending the data to the server. The action is either an absolute or relative URL of the resource that will receive the data. -->
+    <form method="POST" action="../js/submittingformdata.js">
+        <label for="Id">Enter Customer ID:</label>
+        <input type="text" name="Id" />
+        <input type="submit" value="Get Customer" />
+    </form>
+    </br>
+    To trigger the submission of a form, you can use any of the following elements.
+    <button type='submit' name='submitButton'>Submit</button>
+    <input type='submit' name='submitButton' value='Submit' />
+
+    <input type='image' src='/img/5c0.jpg' alt='Submit' />
+    </br>
+    <form id="myForm">
+        Favorite Car:
+        <select name="favoriteCar">
+            <option>Ford Fiesta</option>
+            <option value="Chevy">Chevrolet</option>
+            <option>BMW</option>
+        </select>
+        <br />
+        Comment:
+        <input type="text" name="comment" autofocus="autofocus" />
+    </form>
+    <button id="myButton">Click Me</button>
+    </br>
+    </br>
+    <input type="color">
+    <input type="month">
+
+    <script src="../js/submittingformdata.js" async defer></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+
+</html>

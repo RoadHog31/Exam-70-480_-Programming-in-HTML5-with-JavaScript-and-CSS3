@@ -4,3 +4,4 @@ onmessage = function (e) {
         },
         e.data.timeout * 1000);
 }
+

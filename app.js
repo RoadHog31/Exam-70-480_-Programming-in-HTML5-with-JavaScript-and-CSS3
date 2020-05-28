@@ -5,7 +5,11 @@
 // let mii = 10;
 // console.log(mii);
 
+function average(a, b) {
+  return (a + b) / 2.0;
+}
 
+console.log(average(2, 1));
 
 
 //let me = "me";

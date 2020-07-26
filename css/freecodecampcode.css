@@ -3,10 +3,21 @@
 /*How to Make a Responsive Website in 3 Easy Steps
 https://catswhocode.com/how-to-make-a-responsive-website/
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout
+https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer
 
-1. Layout
-2. Medias
-3. Typography / images
+1. Layout - (modile first, simple, one column. Media Queries -breakpoints , Grid, Flexbox, Multicol) 
+2. Media's - video & images (<picture> <img>)
+3. Typography (viewport units)  
+
+Note: A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as mobile first design.
+https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
+old ways with floats https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html 
+
+Note: responsive images - https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+http://nicolasgallagher.com/responsive-images-using-css3/
+
 
 */
 
@@ -205,7 +216,7 @@ body { width: 30vw; }
     background: gray;
     display: flex;
     height: 100%;
-
+    flex-wrap: wrap;
   }
   #box-7 {
     background-color: dodgerblue;
@@ -239,3 +250,86 @@ body { width: 30vw; }
     height: 50%;
   }
   /*END of flex-wrap*/
+
+  /*END of flex-shrink*/
+  #box-container5 {
+    display: flex;
+    height: 500px;
+  }
+  #box-13 {
+    background-color: dodgerblue;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 1;
+  }
+
+  #box-14 {
+    background-color: orangered;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 2;
+  }
+  /*END of flex-shrink*/
+
+    /*flex-grow*/
+    #box-container6 {
+      display: flex;
+      height: 500px;
+    }
+    #box-15 {
+      background-color: dodgerblue;
+      width: 100%;
+      height: 200px;
+      flex-grow: 1;
+    }
+  
+    #box-16 {
+      background-color: orangered;
+      width: 100%;
+      height: 200px;
+      flex-grow: 2;
+    }
+    /*END of flex-grow*/
+
+    /*flex shorthand grow, shrink basis inline. The default property settings are flex: 0 1 auto;.*/
+    #box-container7 {
+      display: flex;
+      height: 500px;
+    }
+    #box-17 {
+      background-color: dodgerblue;
+      flex: 2 2 150px;     
+      height: 200px;
+      
+    }
+  
+    #box-18 {
+      background-color: orangered;
+      flex: 1 1 150px;
+      height: 200px;
+      
+    }
+    /*END of flex align-self*/
+
+
+     /*END of flex shorthand*/
+    #box-container8 {
+      display: flex;
+      height: 500px;
+    }
+    #box-1 {
+      background-color: dodgerblue;
+      align-self:center;
+      height: 200px;
+      width: 200px;
+    }
+  
+    #box-2 {
+      background-color: orangered;
+      align-self:flex-end;
+      height: 200px;
+      width: 200px;
+    }
+     /*END of flex align-self*/
+
+     /* Introduction to the CSS Grid Challenges */

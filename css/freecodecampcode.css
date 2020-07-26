@@ -1,5 +1,16 @@
-/* Responsive design */
+/* Responsive design Free Code Camp*/
 
+/*How to Make a Responsive Website in 3 Easy Steps
+https://catswhocode.com/how-to-make-a-responsive-website/
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+
+1. Layout
+2. Medias
+3. Typography / images
+
+*/
+
+/* Responsive paragraph using media queries */
 p {
     font-size: 20px;
   }
@@ -24,3 +35,207 @@ p {
   img {
     width: 600px;
   }
+
+  /*Apple MacBook Pro notebooks, and recently iMac computers Retina displays.
+   Retina images - The simplest way to make your images properly appear on High-Resolution Displays, such as the MacBook Pros "retina display" is to define their width and height values as only half of what the original file is. Here is an example of an image that is only using half of the original height and width:*/
+   .retina-img {height: 100px; width: 100px;}
+
+   /*Typegraphy - Instead of using em or px to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element. 
+   
+   The four different viewport units are:
+
+    vw (viewport width): 10vw would be 10% of the viewport's width.
+    vh (viewport height): 3vh would be 3% of the viewport's height.
+    vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+    vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+
+Here is an example that sets a body tag to 30% of the viewport's width.
+body { width: 30vw; }
+*/
+.h2viewport{
+    width: 80vw;
+}
+
+.pviewport{
+
+    width: 75vmin;
+}
+
+/* FlexBox */
+#box-container {
+    
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+
+  /* Tweet Embed */
+  body {
+    
+    font-family: Arial, sans-serif;
+  }
+  header {
+
+    display: flex;
+    flex-direction: row;
+  }
+  header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  header .profile-name {
+
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: flex-start;
+  }
+  header .follow-btn {
+
+    display: flex;
+    align-items:center;
+    margin: 0 0 0 auto;
+  }
+  header .follow-btn button {
+
+    display:flex;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+    
+  }
+  header h3, header h4 {
+
+    display:flex;
+    margin: 0;
+  }
+  #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  footer {
+
+    display:flex;
+    flex-direction: row;
+  }
+  footer .stats {
+
+    display:flex;
+    font-size: 15px;
+  }
+  footer .stats strong {
+    font-size: 18px;
+  }
+  footer .stats .likes {
+    margin-left: 10px;
+  }
+  footer .cta {
+    margin-left: auto;
+  }
+  footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+
+  /* END of Tweet Embed */
+
+  /* flex-direction Property to Make a Row. */
+  #box-container2 {
+    display: flex;
+    height: 500px;
+    flex-direction:row-reverse;
+    
+
+  }
+  #box-3 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-4 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+
+  /* flexbox align-items Property . */
+  #box-container3 {
+    display: flex;
+    height: 500px;
+    flex-direction:row-reverse;
+    border-style: groove;
+    align-items:center;
+
+  }
+  #box-5 {
+    background-color: rgb(30, 255, 68);
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-6 {
+    background-color: rgb(217, 255, 0);
+    width: 50%;
+    height: 50%;
+  }
+
+  /*flex-wrap*/
+  #box-container4 {
+    background: gray;
+    display: flex;
+    height: 100%;
+
+  }
+  #box-7 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 50%;
+  }
+
+  #box-8 {
+    background-color: orangered;
+    width: 25%;
+    height: 50%;
+  }
+  #box-9 {
+    background-color: violet;
+    width: 25%;
+    height: 50%;
+  }
+  #box-10 {
+    background-color: yellow;
+    width: 25%;
+    height: 50%;
+  }
+  #box-11 {
+    background-color: green;
+    width: 25%;
+    height: 50%;
+  }
+  #box-12 {
+    background-color: black;
+    width: 25%;
+    height: 50%;
+  }
+  /*END of flex-wrap*/

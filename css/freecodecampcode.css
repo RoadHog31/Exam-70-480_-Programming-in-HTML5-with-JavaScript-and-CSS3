@@ -1,0 +1,26 @@
+/* Responsive design */
+
+p {
+    font-size: 20px;
+  }
+
+  /* Only change code below this line */
+ @media (max-height: 800px) {
+
+    p {
+        font-size: 10px;
+        }
+  }
+  /* Only change code above this line */
+
+/*responsive images*/
+  .responsive-img {
+
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  img {
+    width: 600px;
+  }

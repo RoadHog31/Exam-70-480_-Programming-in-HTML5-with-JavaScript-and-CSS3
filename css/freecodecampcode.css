@@ -7,8 +7,8 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout
 https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer
 
 1. Layout - (modile first, simple, one column. Media Queries -breakpoints , Grid, Flexbox, Multicol) 
-2. Media's - video & images (<picture> <img>)
-3. Typography (viewport units / rems)  
+2. Medias - video & images (<picture> <img>)
+3. Typography - (viewport units / rems)  
 
 Note: A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g mobile phones), then check for larger screens and implement a multiple-column layout when you know that you have enough screen width to handle it. This is often described as mobile first design.
 https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
@@ -312,7 +312,7 @@ p {
    Retina images - The simplest way to make your images properly appear on High-Resolution Displays, such as the MacBook Pros "retina display" is to define their width and height values as only half of what the original file is. Here is an example of an image that is only using half of the original height and width:*/
    .retina-img {height: 100px; width: 100px;}
 
-   /*Typegraphy - Instead of using em or px to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element. 
+   /*Typography - Instead of using em or px to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element. 
    
    The four different viewport units are:
 
@@ -512,7 +512,7 @@ body { width: 30vw; }
   }
   /*END of flex-wrap*/
 
-  /*END of flex-shrink*/
+  /*flex-shrink*/
   #box-container5 {
     display: flex;
     height: 500px;
@@ -570,10 +570,9 @@ body { width: 30vw; }
       height: 200px;
       
     }
-    /*END of flex align-self*/
-
-
      /*END of flex shorthand*/
+
+     /*Flex align-self*/
     #box-container8 {
       display: flex;
       height: 500px;

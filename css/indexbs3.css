@@ -10,12 +10,21 @@
 
 #000000 - black
 
+Font: Merriweather Sans
+
+title: 26px
+
+sub headings: 18px
+
+main paragraph text: 17px
+
+tags / small text: 12px
 */
 
 
 body{
 
- font-family: 'Open Sans Condensed', sans-serif;   
+ font-family: 'Lato', 'Montserrat', 'Open Sans Condensed', sans-serif;   
 }
 
 header, footer, .bluestripe1{
@@ -32,6 +41,14 @@ header, footer, .bluestripe1{
     font-weight: bolder;
 }
 
+h2{
+
+    color: #ffbe00;
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+
 .whiteStripe{
 
     background-color: #ffffff;
@@ -40,3 +57,37 @@ header, footer, .bluestripe1{
     text-align: center;
 
 }
+
+.navBtn{
+
+    background-color:  #005070;
+    color: white;
+    border-color: #005070;
+    width:50px;
+    height: 50px;
+}
+
+.mainSearchBar{
+
+    border-color: #ffbe00;
+    border-width: 5px;
+    align-self: center;    
+
+
+}
+
+.quickLinks{
+
+    width: 75%;
+    align-items: center;
+    justify-items: center;
+}
+
+/* .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  } */
+
+  .jumbotron { 
+    background-color: #005070; 
+    color: #ffffff;
+  }

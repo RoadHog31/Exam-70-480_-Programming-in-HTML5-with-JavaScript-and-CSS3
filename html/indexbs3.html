@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Title Page</title>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">      
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/indexbs3.css" rel="stylesheet">
@@ -19,37 +21,46 @@
         <![endif]-->
     </head>
     <body>                             
-        <nav class="navbar navbar-default container-fluid bluestripe1" style="width:100%">
+        <nav class="navbar navbar-default navbar-fixed-top bluestripe1" style="width:100%; margin-bottom: 0; border-color:#005070;">
         <div class="container-fluid">
-            <div class="navbar-header">                      
-            <a class="navbar-brand" href="#">                        
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-                </button>                  
-            </a>
-            <h1 class="mainTitle"> Help Butler </h1>
-            </div>
+            <div class="navbar-header">
+                <button class="navbar-brand navBtn" style="width:50px; height: 50px;" href="#"><span class="glyphicon glyphicon-justify"></span></button>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class=""><a href="#"><h2>Help Butler</h2></a></li>                
+              </ul>
         </div>
         </nav>   
-
-            <div class="container-fluid bluestripe1" style="width:100%; height: 500px;">
+        <div class="container-fluid bluestripe1 " style="width:100%; height: 450px; margin-top: 0;" !important>
+            <div class="row">
+                <aside class="col-sm-2"></aside>
+                <section class="col-sm-8">
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                      </div>         
+        </section>
+        <aside class="col-sm-2"></aside>
+        </div>
+    </div>
+            <!-- <div class="container-fluid bluestripe1 " style="width:100%; height: 450px; margin-top: 0;" !important>
                 <div class="row">
                     <aside class="col-sm-2">
                         Col1
                     </aside>
                     <section class="col-sm-8">
                         <form class="navbar-form navbar-justify">
-                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">@</span>
+                                <input class ="mainSearchBar" type="text" class="form-control" placeholder="Looking for an Article?" aria-describedby="basic-addon1">
+                              </div>
                           </form> 
                     </section>
                     <aside class="col-sm-2">
                         Col 3
                     </aside>
                 </div>
-            </div>
+            </div> -->
             <div class="container-fluid whiteStripe" style="width:100%; height: 500px;">
                 <div class="row">
                     <aside class="col-sm-2">
@@ -58,6 +69,16 @@
                     <section class="col-sm-8">
                         <div class="list-group">
                             <a href="#" class="list-group-item active">
+                              <h4 class="list-group-item-heading">List group item heading</h4>
+                              <p class="list-group-item-text">...</p>
+                              <h4 class="list-group-item-heading">List group item heading</h4>
+                              <p class="list-group-item-text">...</p>
+                              <h4 class="list-group-item-heading">List group item heading</h4>
+                              <p class="list-group-item-text">...</p>
+                              <h4 class="list-group-item-heading">List group item heading</h4>
+                              <p class="list-group-item-text">...</p>
+                              <h4 class="list-group-item-heading">List group item heading</h4>
+                              <p class="list-group-item-text">...</p>
                               <h4 class="list-group-item-heading">List group item heading</h4>
                               <p class="list-group-item-text">...</p>
                             </a>
@@ -73,15 +94,43 @@
                 <div class="row">
                     <aside class="col-sm-2">
                         Col1
-                    </aside>
-                    <section class="col-sm-8">
-                        Col 2
+                    </aside>                    
+                    <section class="col-sm-8 center">
+                        <header><h2>Quick Links</h2> </header>
+                             <div class="row ">
+                                <!-- <div class="form-group ">   -->
+                                    <div class="col-xs-6 col-md-3">  
+                                                           
+                                    <a href="">
+                                        <img class="quickLinks " src="../img/Applications@2x-white.png" >
+                                        
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3">                        
+                                        <a href="">
+                                            <img class="quickLinks" src="../img/Applications@2x-white.png">
+                                            
+                                            </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3">                        
+                                        <a href="">
+                                            <img class="quickLinks" src="../img/Applications@2x-white.png">
+                                            
+                                            </a>
+                                        </div>
+                                    <div class="col-xs-6 col-sm-3">                        
+                                            <a href="">
+                                                <img class="quickLinks" src="../img/Applications@2x-white.png">
+                                                
+                                                </a>
+                                        </div>
+                                </div>                                                  
                     </section>
-                    <aside class="col-sm-2">
+                    <aside class="col-sm-2 ">
                         Col 3
                     </aside>
                 </div>
-            </div>
+            </div>           
             <div class="container-fluid whiteStripe" style="width:100%; height: 500px;">
                 <div class="row">
                     <aside class="col-sm-2">
@@ -103,6 +152,31 @@
 
         <footer class="container-fluid ">
             <h1>Footer</h1>
+            <div class="col-xs-6 col-md-3">  
+                                                           
+                <a href="">
+                    <img class="quickLinks " src="../img/HC-ONE Logo.png" >
+                    
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-3">                        
+                    <a href="">
+                        <img class="quickLinks" src="">
+                        
+                        </a>
+                </div>
+                <div class="col-xs-6 col-sm-3">                        
+                    <a href="">
+                        <img class="quickLinks" src="">
+                        
+                        </a>
+                    </div>
+                <div class="col-xs-6 col-sm-3">                        
+                        <a href="">
+                            <img class="quickLinks" src="">
+                            
+                            </a>
+                    </div>
         </footer>
 
 

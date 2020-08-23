@@ -1,6 +1,14 @@
-/* Colorways: #005070
+/* Colorways: 
 
+#005070 - Blue
 
+#ffbe00 - yellow
+
+#ff6624 - orange
+
+#ffffff - white
+
+#000000 - black
 
 */
 
@@ -10,7 +18,25 @@ body{
  font-family: 'Open Sans Condensed', sans-serif;   
 }
 
-header, footer {
+header, footer, .bluestripe1{
 
-    background-color: #333;
+    background-color: #005070;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.mainTitle{
+
+    color: #ffbe00;
+    font-weight: bolder;
+}
+
+.whiteStripe{
+
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    text-align: center;
+
 }

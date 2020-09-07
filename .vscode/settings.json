@@ -17,5 +17,6 @@
         "statusBar.border": "#42b883",
         "titleBar.border": "#42b883"
     },
-    "peacock.color": "#42b883"
+    "peacock.color": "#42b883",
+    "liveServer.settings.multiRootWorkspaceName": "Exam-70-480_-Programming-in-HTML5-with-JavaScript-and-CSS3-1"
 }

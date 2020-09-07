@@ -35,6 +35,24 @@ header, footer, .bluestripe1{
     text-align: center;
 }
 
+.navbar {
+    
+    margin-bottom: 0px;
+    
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffbe00;
+    font-weight: bolder;
+}
+
+
+.navbar-inverse {
+    background-color: #005070;
+    border-color: #005070;
+}
+
+
 .mainTitle{
 
     color: #ffbe00;
@@ -91,3 +109,5 @@ h2{
     background-color: #005070; 
     color: #ffffff;
   }
+
+

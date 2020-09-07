@@ -1,0 +1,168 @@
+Part of the quiet, residential community of Roundhay, near Leeds, Aberford Hall is a friendly care home that proudly offers nursing care.<br />
+<br />
+<strong>Living with us</strong><br />
+The pretty landscaped garden and patio is the perfect spot to spend time with friends and family, and is happily looked after by some of our Residents. The bright, comfortable bedrooms and living areas are all easily accessible by wheelchair.<br />
+<br />
+The home&rsquo;s caring team has created a family atmosphere, encouraging everyone to eat and celebrate special occasions together. Residents are invited to decorate their rooms with small items of their own furniture and treasured belongings so that it feels just like home. Daily life is thoughtfully designed to support mind, body and soul.<br />
+<br />
+<strong><strong>Your personal care plan</strong></strong><br />
+Aberford Hall&rsquo;s Home Manager makes sure that all Residents receive the kindest possible care. Our extensively trained team will deliver all the nursing, specialist care and support services that your loved one requires. Personalised care plans consider not only medical, personal and dietary needs, but also the individual&rsquo;s likes and dislikes, religious preferences, and suggestions from family members that might make their stay with us that little bit more enjoyable.
+
+/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-04.png&hash=a30559b907b13f55dd370fb0bed3832edfb5aa6cdfb80f856d496078306e0cf1
+
+/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-05.png&hash=6abecdaac87d0065d568b594ebe2d7896059bc79c5595c2940b978f18688546f
+
+/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-02.png&hash=e76a52e912d96402fa1bb5526fa752caf28a7a6c2c2a0eaac8a0c613bc752c3f
+
+/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-03.png&hash=98b0d12334d7c6145a6ff2888c3fe3e319e79fd893878a81cea9903d27e6d91f
+
+
+
+.safeAdmissionsImg {
+    background-image: url("/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-04.png&hash=a30559b907b13f55dd370fb0bed3832edfb5aa6cdfb80f856d496078306e0cf1"); }
+
+.getInTouchImg {
+    background-image: url("/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-05.png&hash=6abecdaac87d0065d568b594ebe2d7896059bc79c5595c2940b978f18688546f"); }
+
+.bothSafeVisitsAdmissionsImg {
+    background-image: url("/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-02.png&hash=e76a52e912d96402fa1bb5526fa752caf28a7a6c2c2a0eaac8a0c613bc752c3f"); }
+
+.safeFamilyVisitsImg {
+    background-image: url("/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-03.png&hash=98b0d12334d7c6145a6ff2888c3fe3e319e79fd893878a81cea9903d27e6d91f"); }
+
+
+.carehome-circular {
+    max-width: 220px !important;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 3.2rem auto 0; }
+
+
+    id=searchForCarehome
+
+.rsltImage
+
+
+    <style>
+        .testContainer{
+          font-family: "open sans",arial;
+          font-size: 14px;
+          line-height: 14px;
+          border: thin solid #a0a0a0;
+          overflow: hidden;
+          text-align: left;
+          font-style: normal;
+          background-color: rgb(245, 245, 245);    
+          border-radius:40px;
+          width: 350px;
+          height:63px;
+          margin-top:-66px !important;    
+          margin-left:-40px; 
+          position:relative; 
+          z-index:2; 
+          border-radius:40px;    
+          padding-top:10px;
+          padding-left:15px;
+          padding-right:15px;
+          padding-bottom:10px;
+          text-align:center; 
+          }
+        </style>
+      
+      <div class="img-responsive hidden-xs" > 
+        
+              {% if (SafeVisits == true && CovidFitTest == true) {%}
+                    <div class="testContainer" >
+                      <div style="font-weight:bolder;margin-top: -10px;text-align: center;font-size:16px;margin-left: 12px !important;">
+                          Safe Visit 
+                          <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\tick.png&amp;hash=f635b8db3bcce71df9610b54f5f769d9bea282359ce4d900d093a0f0d1f6c6a4" width="60px" style="margin-left: -15px !important;">
+                        
+                          Safe Admissions <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\tick.png&amp;hash=f635b8db3bcce71df9610b54f5f769d9bea282359ce4d900d093a0f0d1f6c6a4" width="60px" style="margin-left: -15px !important;">
+                        </div>
+                    </div>
+              {% } else {%} 
+                        {% if (SafeVisits == true && CovidFitTest == false) {%}
+                          <div class="testContainer" style="">
+                              <div style="font-weight:bolder;margin-top: -10px;text-align: center;margin-left: 10px !important;font-size:16px;">
+                                  Safe Visit 
+                                  <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\tick.png&amp;hash=f635b8db3bcce71df9610b54f5f769d9bea282359ce4d900d093a0f0d1f6c6a4" width="60px" style="margin-left: -15px !important;">
+                              </div>
+                          </div>
+                        {% } else {%}
+                          {% if (SafeVisits == false && CovidFitTest == true) {%}
+                           <div class="testContainer" style=""> 
+                             <div style="font-weight:bolder;margin-top: -10px;text-align: center;margin-left: 10px !important;font-size:16px;">
+                               Safe Admissions <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\tick.png&hash=f635b8db3bcce71df9610b54f5f769d9bea282359ce4d900d093a0f0d1f6c6a4" width="60px" style="margin-left: -15px !important;"/>
+                             </div> 
+                          </div>
+                          {% }#%}
+                        {% }#%}
+              {% }#%}
+          
+      </div>
+
+
+
+      <!-- new -->
+      <style>
+        .hoverContainer{
+      
+           <!-- mouse over image to get results  -->
+              a:hover {
+                color: red;
+              }
+         
+          }
+        </style>
+      
+      <div class="img-responsive hidden-xs" >         
+              {% if (SafeVisits == true && CovidFitTest == true) {%}
+                    <div class="img-responsive" >
+                      <div style="margin-top: -10px;text-align: center;font-size:16px !important;">
+                          <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-02.png&hash=e76a52e912d96402fa1bb5526fa752caf28a7a6c2c2a0eaac8a0c613bc752c3f" width="60px" style="margin-left: -15px !important;">
+                      </div>
+                    </div>
+              {% } else {%} 
+                        {% if (SafeVisits == true && CovidFitTest == false) {%}
+                          <div class="img-responsive" style="">
+                              <div style="">                                
+                                  <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-03.png&hash=98b0d12334d7c6145a6ff2888c3fe3e319e79fd893878a81cea9903d27e6d91f" width="60px" style="margin-left: -15px !important;">
+                              </div>
+                          </div>
+                        {% } else {%}
+                          {% if (SafeVisits == false && CovidFitTest == true) {%}
+                           <div class="img-responsive" style=""> 
+                             <div style="">
+                               <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-04.png&hash=a30559b907b13f55dd370fb0bed3832edfb5aa6cdfb80f856d496078306e0cf1" width="60px" style="margin-left: -15px !important;"/>
+                             </div> 
+                          </div>
+         {% } else {%}
+                          {% if (SafeVisits == false && CovidFitTest == false) {%}
+                           <div class="img-responsive" style=""> 
+                             <div style="">
+                               <img src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-05.png&hash=6abecdaac87d0065d568b594ebe2d7896059bc79c5595c2940b978f18688546f" width="60px" style="margin-left: -15px !important;"/>
+                             </div> 
+                          </div>
+                          {% }#%}
+                        {% }#%}
+              {% }#%}
+          </div>
+      
+              .rsltImage
+
+              .carehome-circular {
+                max-width: 220px !important;
+                height: auto;
+                border-radius: 50%;
+                display: block;
+                margin: 3.2rem auto 0; }
+
+              .img-responsive {
+                display: block;
+                max-width: 100%;
+                height: auto; }
+
+
+                <div id="search-results-list" class="container">
+                    <div class="row home-list">

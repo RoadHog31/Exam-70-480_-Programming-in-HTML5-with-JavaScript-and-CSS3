@@ -1,0 +1,83 @@
+<br />
+<!--<center>
+  <p class="centerText" id="HomMgr">Home Manager: {%HomeManager%}</p></center> -->
+  
+  <div class="hidden-sm hidden-md hidden-lg" >
+      <div class="phoneMob">
+         <!-- <p class="centerText nopadding"><strong>New Care Enquiries: <span>{%Enquiry_Phone%}</span></strong></p>-->      
+          <p class="centerText nopadding">Recruitment:<span style="color:#000"> 0800 169 0229</span></p>      
+          <p class="centerText nopadding">Press office: <span style="color:#000">0800 014 8509</span></p>                 
+      </div>
+      <center id="resiMob">
+          {% string.IsNullOrEmpty(resilink) ? "" : "<div class='col-lg-5 col-lg-push-1' ><a target='_blank' href='"+ resilink +"' ><img src='~/CMSPages/GetResource.ashx?image=~/HC1_LIVE/media/images/Resilink.jpg' alt='Care Plans and Daily Reports' class='img-responsive'></a></div>" #%}
+      </center>    
+      <div class="col-lg-5 col-lg-push-1 newResidentEnquiry" >    
+          <a class="center-block" href="/Get-In-Touch.aspx?select=resident&amp;Home={%Name%}">
+            <center> <img src="~/CMSPages/GetResource.ashx?image=~/HC1_LIVE/media/images/ResidentEnquiryButton_Mobile.jpg" alt="Resident Enquiry" class="img-responsive"></center>
+          </a>   
+      </div> 
+      <!--<div id="mobMap"><iframe allowfullscreen="" frameborder="0" height="300px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA2-M1bDfuQk_bbj7Efc0lap4BgboTE-70&amp;center={%Geolocation_Latitude%},{%Geolocation_Longitude%}&amp;zoom=12&amp;q={%Name%}{%Location_Description%}" style="border:0" width="100%"></iframe></div>-->
+ <!--Start of Mobile Polygon and images -->
+      <div class="container polygonMobileHeader hidden-md hidden-lg ">		
+          <!-- Images for safe admissions etc. -->
+        <div class="row" style="">          
+            {% if (SafeVisits == true && CovidFitTest == true){ %}
+                <center>
+                    <div class="col-xs-4">
+                      <img class="img-responsive covidSafeImageMobile" style=""  src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-11.png&hash=0f8ab661d5b31423b1493a3b7275924d17366677fa38d202cab137d55ab61621">
+                    </div>
+                    <div class="col-xs-4"> 
+                       <img class="img-responsive covidSafeImageMobile" style=""  src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-12.png&hash=5bf0cb16e1de3efaa0f99b58bca243e95919a1535fb9d04726a3ef223576dfdb">
+                    </div>                  
+                    <div class="col-xs-4">
+                       <a href="https://www.flipsnack.com/kindcare/safe-and-kind-care-through-coronavirus_25_08_20/full-view.html" style="z-index:2;" download>
+                          <img class="img-responsive covidSafeImageMobile" style="" src="~/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-14.png&hash=42bcaeb40f92ea819bfbc9ac1133abaaf5d40614e0fea73bdcd7e93a7addfaa1">
+                       </a> 
+                    </div>  
+                </center>
+                {% }else{ %}
+                {% if (SafeVisits == true && CovidFitTest == false){ %}
+                <center>
+                    <div class="col-xs-6 ">
+                          <img class="img-responsive pull-right covidSafeImageMobile" src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-11.png&hash=0f8ab661d5b31423b1493a3b7275924d17366677fa38d202cab137d55ab61621"> 
+                    </div>
+                    <div class="col-xs-6 ">
+                        <a href="https://www.flipsnack.com/kindcare/safe-and-kind-care-through-coronavirus_25_08_20/full-view.html" class="" style="z-index:2;" download>
+                            <img class="img-responsive pull-left covidSafeImageMobile" src="~/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-14.png&hash=42bcaeb40f92ea819bfbc9ac1133abaaf5d40614e0fea73bdcd7e93a7addfaa1">
+                         </a> 
+                    </div>
+                </center>
+                {% }else{ %}
+                  {% if (SafeVisits == false && CovidFitTest == true){ %}
+                         <div class="col-xs-6 ">
+                               <img class="img-responsive covidSafeImageMobile" style="left: 90px;" src="/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-12.png&hash=5bf0cb16e1de3efaa0f99b58bca243e95919a1535fb9d04726a3ef223576dfdb">
+                          </div>
+                          <div class="col-xs-6 ">
+                             <a href="https://www.flipsnack.com/kindcare/safe-and-kind-care-through-coronavirus_25_08_20/full-view.html" class="img-responsive carehome-circular rsltImage" style="z-index:2;" download>
+                                <img class="img-responsive covidSafeImageMobile" style="left: 100px; bottom: 30px;" src="~/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-14.png&hash=42bcaeb40f92ea819bfbc9ac1133abaaf5d40614e0fea73bdcd7e93a7addfaa1">
+                             </a> 
+                          </div>
+                {% }else{ %}             
+                <!-- Download button -->
+                    <center>
+                        <div class="col-xs-6 ">
+                              <a href="https://www.hc-one.co.uk/Get-In-Touch.aspx" class="" style="z-index:2;" target="_blank">
+                                  <img class="img-responsive pull-right covidSafeImageMobile" src="~/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-10.png&hash=4ab54cfeb4bc2f2e15a953647ab8a987d546dc5fe609146bc37cfc27342aee2e">
+                            </a>
+                        </div>
+                        <div class="col-xs-6 ">
+                            <a href="https://www.flipsnack.com/kindcare/safe-and-kind-care-through-coronavirus_25_08_20/full-view.html" class="" style="z-index:2;" download>
+                              <img class="img-responsive pull-left covidSafeImageMobile" src="~/CMSPages/GetAzureFile.aspx?path=~\hc1_live\media\images\hc_one_coronavirus_web_asset_rgb-14.png&hash=42bcaeb40f92ea819bfbc9ac1133abaaf5d40614e0fea73bdcd7e93a7addfaa1">
+                            </a> 
+                        </div>
+                    </center>
+                <!-- End Download button -->       
+                {% } #%}
+                {% } #%}
+                {% } #%} 
+           </div>      
+        </div>
+      <!--end of of Polgon right and images -->
+</div>
+
+    

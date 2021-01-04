@@ -46,3 +46,5 @@ vehicle.prototype.accelerateAfterClick = function () {
 
 var car = new vehicle();
 car.accelerateAfterClick();
+
+
